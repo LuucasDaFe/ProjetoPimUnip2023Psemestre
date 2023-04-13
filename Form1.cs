@@ -37,13 +37,13 @@ namespace ProjetoPimUnip2023Psemestre
             if(menuVertical.Width == 250)
             {
                 menuVertical.Width = 70;
-                ImgLanche.Height = 15;
+                ImgLanche.Height = 40;
                 ImgLanche.Width = 60;
             }
             else
             {
                 menuVertical.Width = 250;
-                ImgLanche.Height = 75;
+                ImgLanche.Height = 140;
                 ImgLanche.Width = 240;
             }
         }
@@ -91,6 +91,26 @@ namespace ProjetoPimUnip2023Psemestre
         private void button5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ImgLanche_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void abrirFormNoPainel(object formFilho)
+        {
+            if (this.painelContenedor.Controls.Count > 0)
+                this.painelContenedor.Controls.RemoveAt(0);
+            Form fh = formFilho as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.painelContenedor.Controls.Add(fh);
+            this.painelContenedor.Tag = fh;
+            fh.Show();
+        }
+        private void btnFuncionarios_Click(object sender, EventArgs e)
+        {
+            abrirFormNoPainel(new Colaboradores());
         }
     }
 }

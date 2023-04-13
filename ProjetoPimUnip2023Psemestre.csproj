@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Colaboradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colaboradores.Designer.cs">
+      <DependentUpon>Colaboradores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FomularioUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Colaboradores.resx">
+      <DependentUpon>Colaboradores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FomularioUsuario.resx">
       <DependentUpon>FomularioUsuario.cs</DependentUpon>
     </EmbeddedResource>
