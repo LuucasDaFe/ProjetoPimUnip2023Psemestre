@@ -112,5 +112,15 @@ namespace ProjetoPimUnip2023Psemestre
         {
             abrirFormNoPainel(new Colaboradores());
         }
+
+        private void painelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            abrirFormNoPainel(new Ponto_horarios());
+        }
     }
 }

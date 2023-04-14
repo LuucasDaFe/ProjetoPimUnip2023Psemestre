@@ -67,7 +67,7 @@
             this.menuVertical.Controls.Add(this.btnFuncionarios);
             this.menuVertical.Controls.Add(this.pictureBox1);
             this.menuVertical.Controls.Add(this.ImgLanche);
-            this.menuVertical.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.menuVertical.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuVertical.Location = new System.Drawing.Point(0, 0);
             this.menuVertical.Name = "menuVertical";
@@ -149,6 +149,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Pontos";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnHolerite
             // 
@@ -165,7 +166,7 @@
             this.btnHolerite.Name = "btnHolerite";
             this.btnHolerite.Size = new System.Drawing.Size(250, 45);
             this.btnHolerite.TabIndex = 3;
-            this.btnHolerite.Text = "Holerite";
+            this.btnHolerite.Text = " Holerite";
             this.btnHolerite.UseVisualStyleBackColor = true;
             this.btnHolerite.Click += new System.EventHandler(this.btnHolerite_Click);
             // 
@@ -180,7 +181,7 @@
             this.btnFuncionarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFuncionarios.ImageIndex = 13;
             this.btnFuncionarios.ImageList = this.imageList1;
-            this.btnFuncionarios.Location = new System.Drawing.Point(0, 150);
+            this.btnFuncionarios.Location = new System.Drawing.Point(0, 151);
             this.btnFuncionarios.Name = "btnFuncionarios";
             this.btnFuncionarios.Size = new System.Drawing.Size(250, 45);
             this.btnFuncionarios.TabIndex = 1;
@@ -212,7 +213,7 @@
             // 
             // barraTitulo
             // 
-            this.barraTitulo.BackColor = System.Drawing.Color.Goldenrod;
+            this.barraTitulo.BackColor = System.Drawing.Color.White;
             this.barraTitulo.Controls.Add(this.iconMinimizar);
             this.barraTitulo.Controls.Add(this.iconRestaurar);
             this.barraTitulo.Controls.Add(this.iconMaximizar);
@@ -295,6 +296,7 @@
             this.painelContenedor.Name = "painelContenedor";
             this.painelContenedor.Size = new System.Drawing.Size(1034, 561);
             this.painelContenedor.TabIndex = 2;
+            this.painelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.painelContenedor_Paint);
             // 
             // Painel_Inicio
             // 

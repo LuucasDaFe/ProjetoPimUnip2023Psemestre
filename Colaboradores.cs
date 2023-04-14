@@ -41,5 +41,25 @@ namespace ProjetoPimUnip2023Psemestre
         {
 
         }
+
+        private void btnColaboradores_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblQuantidadeFuncio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvListaFuncio_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
