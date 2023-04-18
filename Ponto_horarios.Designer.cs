@@ -36,8 +36,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblHolerite = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnFecharPainelFuncionario = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblPontoHorario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvListaFuncio = new System.Windows.Forms.DataGridView();
@@ -46,8 +49,9 @@
             this.InicioIntervalo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FinalIntervalo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblPontoHorario = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaFuncio)).BeginInit();
@@ -56,6 +60,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblHolerite);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnFecharPainelFuncionario);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -63,6 +69,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1100, 70);
             this.panel1.TabIndex = 3;
+            // 
+            // lblHolerite
+            // 
+            this.lblHolerite.AutoSize = true;
+            this.lblHolerite.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHolerite.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblHolerite.Location = new System.Drawing.Point(92, 27);
+            this.lblHolerite.Name = "lblHolerite";
+            this.lblHolerite.Size = new System.Drawing.Size(58, 19);
+            this.lblHolerite.TabIndex = 6;
+            this.lblHolerite.Text = "Pontos";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagens_Icone_Ponto;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // btnFecharPainelFuncionario
             // 
@@ -86,6 +113,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1100, 55);
             this.panel3.TabIndex = 4;
+            // 
+            // lblPontoHorario
+            // 
+            this.lblPontoHorario.AutoSize = true;
+            this.lblPontoHorario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPontoHorario.Location = new System.Drawing.Point(10, 11);
+            this.lblPontoHorario.Name = "lblPontoHorario";
+            this.lblPontoHorario.Size = new System.Drawing.Size(401, 22);
+            this.lblPontoHorario.TabIndex = 2;
+            this.lblPontoHorario.Text = "Pesquisar Horário de ponto do Funcionário:";
             // 
             // pictureBox1
             // 
@@ -114,8 +151,8 @@
             this.dgvListaFuncio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -181,16 +218,6 @@
             this.HoraFinal.Name = "HoraFinal";
             this.HoraFinal.Width = 220;
             // 
-            // lblPontoHorario
-            // 
-            this.lblPontoHorario.AutoSize = true;
-            this.lblPontoHorario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPontoHorario.Location = new System.Drawing.Point(10, 11);
-            this.lblPontoHorario.Name = "lblPontoHorario";
-            this.lblPontoHorario.Size = new System.Drawing.Size(401, 22);
-            this.lblPontoHorario.TabIndex = 2;
-            this.lblPontoHorario.Text = "Pesquisar Horário de ponto do Funcionário:";
-            // 
             // Ponto_horarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +233,7 @@
             this.Load += new System.EventHandler(this.Ponto_horarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -228,5 +256,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FinalIntervalo;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFinal;
         private System.Windows.Forms.Label lblPontoHorario;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblHolerite;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }

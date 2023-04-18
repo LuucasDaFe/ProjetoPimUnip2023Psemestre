@@ -131,6 +131,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "Registros";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -203,7 +204,7 @@
             // 
             this.ImgLanche.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ImgLanche.Image = ((System.Drawing.Image)(resources.GetObject("ImgLanche.Image")));
-            this.ImgLanche.Location = new System.Drawing.Point(3, 9);
+            this.ImgLanche.Location = new System.Drawing.Point(7, 3);
             this.ImgLanche.Name = "ImgLanche";
             this.ImgLanche.Size = new System.Drawing.Size(240, 130);
             this.ImgLanche.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

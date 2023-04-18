@@ -79,5 +79,45 @@ namespace ProjetoPimUnip2023Psemestre.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imagem_Icone_Funcionario {
+            get {
+                object obj = ResourceManager.GetObject("Imagem_Icone_Funcionario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imagem_Icone_Registros {
+            get {
+                object obj = ResourceManager.GetObject("Imagem_Icone_Registros", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imagem_Icone_Registros1 {
+            get {
+                object obj = ResourceManager.GetObject("Imagem_Icone_Registros1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imagens_Icone_Ponto {
+            get {
+                object obj = ResourceManager.GetObject("Imagens_Icone_Ponto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

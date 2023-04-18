@@ -85,12 +85,13 @@ namespace ProjetoPimUnip2023Psemestre
 
         private void btnHolerite_Click(object sender, EventArgs e)
         {
-
+            abrirFormNoPainel(new IconHolerite());
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
+            objetoConexao.estabelecerConexao();
         }
 
         private void ImgLanche_Click(object sender, EventArgs e)
@@ -121,6 +122,11 @@ namespace ProjetoPimUnip2023Psemestre
         private void button2_Click(object sender, EventArgs e)
         {
             abrirFormNoPainel(new Ponto_horarios());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            abrirFormNoPainel(new Registro());
         }
     }
 }

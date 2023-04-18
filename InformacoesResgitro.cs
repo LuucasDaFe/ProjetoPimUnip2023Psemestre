@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace ProjetoPimUnip2023Psemestre
 {
-    public partial class IconHolerite : Form
+    public partial class InformacoesResgitro : Form
     {
-        public IconHolerite()
+        public InformacoesResgitro()
         {
             InitializeComponent();
         }
 
-        private void lblColaboradores_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Holerite_Load(object sender, EventArgs e)
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }

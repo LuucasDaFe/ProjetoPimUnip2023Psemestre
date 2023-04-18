@@ -38,19 +38,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnFecharPainelFuncionario = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnColaboradores = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvListaFuncio = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnPesquisa = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnColaboradores = new System.Windows.Forms.Button();
             this.Colaborador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Depatamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +52,12 @@
             this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoleriteDoMes = new System.Windows.Forms.DataGridViewImageColumn();
             this.pastaHolerite = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnPesquisa = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -92,6 +92,24 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.ImageIndex = 13;
+            this.button2.ImageList = this.imageList1;
+            this.button2.Location = new System.Drawing.Point(479, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(204, 70);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Demissões";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -111,6 +129,43 @@
             this.imageList1.Images.SetKeyName(12, "Imagem_Icone_holerite (2).png");
             this.imageList1.Images.SetKeyName(13, "Imagem_Icone_Funcionarios.png");
             this.imageList1.Images.SetKeyName(14, "Imagem_Icone_Registros.png");
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.ImageIndex = 13;
+            this.button1.ImageList = this.imageList1;
+            this.button1.Location = new System.Drawing.Point(286, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(197, 70);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Adimssão";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnColaboradores
+            // 
+            this.btnColaboradores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnColaboradores.FlatAppearance.BorderSize = 0;
+            this.btnColaboradores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnColaboradores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnColaboradores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColaboradores.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnColaboradores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnColaboradores.ImageIndex = 13;
+            this.btnColaboradores.ImageList = this.imageList1;
+            this.btnColaboradores.Location = new System.Drawing.Point(23, 0);
+            this.btnColaboradores.Name = "btnColaboradores";
+            this.btnColaboradores.Size = new System.Drawing.Size(257, 70);
+            this.btnColaboradores.TabIndex = 2;
+            this.btnColaboradores.Text = "Funcionarios ativos";
+            this.btnColaboradores.UseVisualStyleBackColor = true;
+            this.btnColaboradores.Click += new System.EventHandler(this.btnColaboradores_Click);
             // 
             // panel2
             // 
@@ -162,126 +217,6 @@
             this.dgvListaFuncio.Size = new System.Drawing.Size(1167, 663);
             this.dgvListaFuncio.TabIndex = 0;
             this.dgvListaFuncio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaFuncio_CellContentClick);
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.btnPesquisa);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1167, 55);
-            this.panel3.TabIndex = 0;
-            // 
-            // btnPesquisa
-            // 
-            this.btnPesquisa.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnPesquisa.FlatAppearance.BorderSize = 0;
-            this.btnPesquisa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
-            this.btnPesquisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisa.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisa.Location = new System.Drawing.Point(599, 7);
-            this.btnPesquisa.Name = "btnPesquisa";
-            this.btnPesquisa.Size = new System.Drawing.Size(269, 32);
-            this.btnPesquisa.TabIndex = 1;
-            this.btnPesquisa.Text = "Iniciar nova Admissão";
-            this.btnPesquisa.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(147, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(400, 26);
-            this.textBox1.TabIndex = 0;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Holerite do Mes";
-            this.dataGridViewImageColumn1.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagem_Icon_verficar;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn1.Width = 50;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "Todos";
-            this.dataGridViewImageColumn2.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagem_Icon_Pastas;
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn2.Width = 50;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(486, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.ImageIndex = 13;
-            this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(479, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(204, 70);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Demissões";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageIndex = 13;
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(286, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 70);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Adimssão";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnColaboradores
-            // 
-            this.btnColaboradores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnColaboradores.FlatAppearance.BorderSize = 0;
-            this.btnColaboradores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnColaboradores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnColaboradores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnColaboradores.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnColaboradores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnColaboradores.ImageIndex = 13;
-            this.btnColaboradores.ImageList = this.imageList1;
-            this.btnColaboradores.Location = new System.Drawing.Point(23, 0);
-            this.btnColaboradores.Name = "btnColaboradores";
-            this.btnColaboradores.Size = new System.Drawing.Size(257, 70);
-            this.btnColaboradores.TabIndex = 2;
-            this.btnColaboradores.Text = "Funcionarios ativos";
-            this.btnColaboradores.UseVisualStyleBackColor = true;
-            this.btnColaboradores.Click += new System.EventHandler(this.btnColaboradores_Click);
             // 
             // Colaborador
             // 
@@ -346,6 +281,71 @@
             this.pastaHolerite.Name = "pastaHolerite";
             this.pastaHolerite.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.pastaHolerite.Width = 50;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.btnPesquisa);
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1167, 55);
+            this.panel3.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(486, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnPesquisa
+            // 
+            this.btnPesquisa.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnPesquisa.FlatAppearance.BorderSize = 0;
+            this.btnPesquisa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
+            this.btnPesquisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisa.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisa.Location = new System.Drawing.Point(599, 7);
+            this.btnPesquisa.Name = "btnPesquisa";
+            this.btnPesquisa.Size = new System.Drawing.Size(269, 32);
+            this.btnPesquisa.TabIndex = 1;
+            this.btnPesquisa.Text = "Iniciar nova Admissão";
+            this.btnPesquisa.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(147, 10);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(400, 26);
+            this.textBox1.TabIndex = 0;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Holerite do Mes";
+            this.dataGridViewImageColumn1.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagem_Icon_verficar;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Todos";
+            this.dataGridViewImageColumn2.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagem_Icon_Pastas;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewImageColumn2.Width = 50;
             // 
             // Colaboradores
             // 
