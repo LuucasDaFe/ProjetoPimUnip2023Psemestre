@@ -30,12 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IconHolerite));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PainelHolerite = new System.Windows.Forms.Panel();
             this.lblHolerite = new System.Windows.Forms.Label();
             this.pictureBoxIconHolerite = new System.Windows.Forms.PictureBox();
@@ -45,19 +40,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPesquisa = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dgvListaFuncio = new System.Windows.Forms.DataGridView();
-            this.Colaborador = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaNomeHolerite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Depatamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gestor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvHoleriteFuncionario = new System.Windows.Forms.DataGridView();
             this.HoleriteDoMes = new System.Windows.Forms.DataGridViewImageColumn();
             this.pastaHolerite = new System.Windows.Forms.DataGridViewImageColumn();
             this.PainelHolerite.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconHolerite)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaFuncio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoleriteFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
             // PainelHolerite
@@ -162,6 +152,7 @@
             this.btnPesquisa.TabIndex = 1;
             this.btnPesquisa.Text = "Pesquisar\r\n";
             this.btnPesquisa.UseVisualStyleBackColor = false;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
             // 
             // textBox1
             // 
@@ -171,95 +162,49 @@
             this.textBox1.Size = new System.Drawing.Size(400, 26);
             this.textBox1.TabIndex = 0;
             // 
-            // dgvListaFuncio
+            // dgvHoleriteFuncionario
             // 
-            this.dgvListaFuncio.AllowUserToOrderColumns = true;
-            this.dgvListaFuncio.BackgroundColor = System.Drawing.Color.White;
-            this.dgvListaFuncio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dgvListaFuncio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListaFuncio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvListaFuncio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaFuncio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Colaborador,
-            this.Identificador,
-            this.colunaNomeHolerite,
-            this.Depatamento,
-            this.Gestor,
+            this.dgvHoleriteFuncionario.AllowUserToAddRows = false;
+            this.dgvHoleriteFuncionario.AllowUserToDeleteRows = false;
+            this.dgvHoleriteFuncionario.AllowUserToOrderColumns = true;
+            this.dgvHoleriteFuncionario.AllowUserToResizeColumns = false;
+            this.dgvHoleriteFuncionario.AllowUserToResizeRows = false;
+            this.dgvHoleriteFuncionario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHoleriteFuncionario.BackgroundColor = System.Drawing.Color.White;
+            this.dgvHoleriteFuncionario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dgvHoleriteFuncionario.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dgvHoleriteFuncionario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHoleriteFuncionario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvHoleriteFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoleriteFuncionario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HoleriteDoMes,
             this.pastaHolerite});
-            this.dgvListaFuncio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvListaFuncio.Location = new System.Drawing.Point(0, 125);
-            this.dgvListaFuncio.Name = "dgvListaFuncio";
-            this.dgvListaFuncio.RowHeadersVisible = false;
-            this.dgvListaFuncio.Size = new System.Drawing.Size(1113, 514);
-            this.dgvListaFuncio.TabIndex = 6;
-            // 
-            // Colaborador
-            // 
-            this.Colaborador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
-            this.Colaborador.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Colaborador.HeaderText = "COLABORADOR";
-            this.Colaborador.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagem_Icone_Funcionario;
-            this.Colaborador.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Colaborador.Name = "Colaborador";
-            this.Colaborador.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Colaborador.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Colaborador.Width = 200;
-            // 
-            // Identificador
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Transparent;
-            this.Identificador.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Identificador.HeaderText = "ID";
-            this.Identificador.Name = "Identificador";
-            // 
-            // colunaNomeHolerite
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colunaNomeHolerite.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colunaNomeHolerite.HeaderText = "NOME DO COLABORADOR";
-            this.colunaNomeHolerite.Name = "colunaNomeHolerite";
-            this.colunaNomeHolerite.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colunaNomeHolerite.Width = 360;
-            // 
-            // Depatamento
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Depatamento.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Depatamento.HeaderText = "STATUS";
-            this.Depatamento.Name = "Depatamento";
-            // 
-            // Gestor
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gestor.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Gestor.HeaderText = "RECEBIMENTO";
-            this.Gestor.Name = "Gestor";
-            this.Gestor.Width = 250;
+            this.dgvHoleriteFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHoleriteFuncionario.Location = new System.Drawing.Point(0, 125);
+            this.dgvHoleriteFuncionario.Name = "dgvHoleriteFuncionario";
+            this.dgvHoleriteFuncionario.RowHeadersVisible = false;
+            this.dgvHoleriteFuncionario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvHoleriteFuncionario.Size = new System.Drawing.Size(1113, 514);
+            this.dgvHoleriteFuncionario.TabIndex = 6;
+            this.dgvHoleriteFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaFuncio_CellContentClick);
+            this.dgvHoleriteFuncionario.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvHoleriteFuncionario_CellFormatting);
+            this.dgvHoleriteFuncionario.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvHoleriteFuncionario_DataBindingComplete);
+            this.dgvHoleriteFuncionario.VisibleChanged += new System.EventHandler(this.dgvListaFuncio_VisibleChanged);
             // 
             // HoleriteDoMes
             // 
-            this.HoleriteDoMes.HeaderText = "Do Mes";
+            this.HoleriteDoMes.HeaderText = "Atual";
             this.HoleriteDoMes.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagem_Icon_verficar;
             this.HoleriteDoMes.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.HoleriteDoMes.Name = "HoleriteDoMes";
             this.HoleriteDoMes.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.HoleriteDoMes.Width = 50;
             // 
             // pastaHolerite
             // 
@@ -268,7 +213,6 @@
             this.pastaHolerite.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.pastaHolerite.Name = "pastaHolerite";
             this.pastaHolerite.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.pastaHolerite.Width = 50;
             // 
             // IconHolerite
             // 
@@ -276,7 +220,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1113, 639);
-            this.Controls.Add(this.dgvListaFuncio);
+            this.Controls.Add(this.dgvHoleriteFuncionario);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.PainelHolerite);
             this.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -290,7 +234,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaFuncio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoleriteFuncionario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,12 +250,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnPesquisa;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dgvListaFuncio;
-        private System.Windows.Forms.DataGridViewImageColumn Colaborador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colunaNomeHolerite;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Depatamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gestor;
+        private System.Windows.Forms.DataGridView dgvHoleriteFuncionario;
         private System.Windows.Forms.DataGridViewImageColumn HoleriteDoMes;
         private System.Windows.Forms.DataGridViewImageColumn pastaHolerite;
     }

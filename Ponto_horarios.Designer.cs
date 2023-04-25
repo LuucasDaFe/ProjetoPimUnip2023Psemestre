@@ -32,9 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblHolerite = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -44,11 +41,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvListaFuncio = new System.Windows.Forms.DataGridView();
-            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraInicial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InicioIntervalo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FinalIntervalo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -113,6 +105,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1100, 55);
             this.panel3.TabIndex = 4;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // lblPontoHorario
             // 
@@ -146,6 +139,8 @@
             // 
             // dgvListaFuncio
             // 
+            this.dgvListaFuncio.AllowUserToOrderColumns = true;
+            this.dgvListaFuncio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaFuncio.BackgroundColor = System.Drawing.Color.White;
             this.dgvListaFuncio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgvListaFuncio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -158,65 +153,24 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvListaFuncio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListaFuncio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaFuncio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Data,
-            this.HoraInicial,
-            this.InicioIntervalo,
-            this.FinalIntervalo,
-            this.HoraFinal});
             this.dgvListaFuncio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListaFuncio.Location = new System.Drawing.Point(0, 125);
             this.dgvListaFuncio.Name = "dgvListaFuncio";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListaFuncio.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.dgvListaFuncio.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListaFuncio.Size = new System.Drawing.Size(1100, 493);
             this.dgvListaFuncio.TabIndex = 5;
             this.dgvListaFuncio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaFuncio_CellContentClick);
-            // 
-            // Data
-            // 
-            this.Data.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Data.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Data.HeaderText = "Data";
-            this.Data.Name = "Data";
-            this.Data.Width = 200;
-            // 
-            // HoraInicial
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HoraInicial.DefaultCellStyle = dataGridViewCellStyle3;
-            this.HoraInicial.HeaderText = "Hora incial ";
-            this.HoraInicial.Name = "HoraInicial";
-            this.HoraInicial.Width = 220;
-            // 
-            // InicioIntervalo
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InicioIntervalo.DefaultCellStyle = dataGridViewCellStyle4;
-            this.InicioIntervalo.HeaderText = "Inicio Intervalo";
-            this.InicioIntervalo.Name = "InicioIntervalo";
-            this.InicioIntervalo.Width = 220;
-            // 
-            // FinalIntervalo
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinalIntervalo.DefaultCellStyle = dataGridViewCellStyle5;
-            this.FinalIntervalo.HeaderText = "Final intervalo";
-            this.FinalIntervalo.Name = "FinalIntervalo";
-            this.FinalIntervalo.Width = 220;
-            // 
-            // HoraFinal
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Transparent;
-            this.HoraFinal.DefaultCellStyle = dataGridViewCellStyle6;
-            this.HoraFinal.HeaderText = "Hora Final";
-            this.HoraFinal.Name = "HoraFinal";
-            this.HoraFinal.Width = 220;
+            this.dgvListaFuncio.VisibleChanged += new System.EventHandler(this.dgvListaFuncio_VisibleChanged);
             // 
             // Ponto_horarios
             // 
@@ -231,6 +185,7 @@
             this.Name = "Ponto_horarios";
             this.Text = "Ponto_horarios";
             this.Load += new System.EventHandler(this.Ponto_horarios_Load);
+            this.VisibleChanged += new System.EventHandler(this.Ponto_horarios_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -250,11 +205,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dgvListaFuncio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Data;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InicioIntervalo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FinalIntervalo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoraFinal;
         private System.Windows.Forms.Label lblPontoHorario;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblHolerite;

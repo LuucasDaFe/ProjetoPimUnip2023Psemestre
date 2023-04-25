@@ -13,6 +13,8 @@ namespace ProjetoPimUnip2023Psemestre
 {
     public partial class Painel_Inicio : Form
     {
+        private DataTable dgvListaFuncio;
+
         public Painel_Inicio()
         {
             InitializeComponent();
@@ -108,6 +110,7 @@ namespace ProjetoPimUnip2023Psemestre
             this.painelContenedor.Controls.Add(fh);
             this.painelContenedor.Tag = fh;
             fh.Show();
+
         }
         private void btnFuncionarios_Click(object sender, EventArgs e)
         {
@@ -122,6 +125,8 @@ namespace ProjetoPimUnip2023Psemestre
         private void button2_Click(object sender, EventArgs e)
         {
             abrirFormNoPainel(new Ponto_horarios());
+            //Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
+            //dgvListaFuncio.Dat = objetoConexao.incluirInfoDgvColaboradores();
         }
 
         private void button3_Click(object sender, EventArgs e)

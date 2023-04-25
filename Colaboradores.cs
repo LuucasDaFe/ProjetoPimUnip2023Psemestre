@@ -45,6 +45,8 @@ namespace ProjetoPimUnip2023Psemestre
         private void btnColaboradores_Click(object sender, EventArgs e)
         {
 
+            Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
+            dgvListaFuncio.DataSource = objetoConexao.statusFuncionarios("true");
         }
 
         private void lblQuantidadeFuncio_Click(object sender, EventArgs e)
@@ -57,7 +59,31 @@ namespace ProjetoPimUnip2023Psemestre
 
         }
 
+        private void dgvListaFuncio_VisibleChanged(object sender, EventArgs e)
+        {
+            string comandoSql = "SELECT * FROM info_holerite_funcionarios;";
+            Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
+            dgvListaFuncio.DataSource = objetoConexao.incluirInfoDgvColaboradores(comandoSql);
+        }
+
         private void dgvListaFuncio_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
+            dgvListaFuncio.DataSource = objetoConexao.statusFuncionarios("false");
+        }
+
+        private void btnPesquisarColaborador_Click(object sender, EventArgs e)
+        {
+            Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
+            dgvListaFuncio.DataSource = objetoConexao.pesquisarColaborador(barraPesquisaColaborador.Text);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

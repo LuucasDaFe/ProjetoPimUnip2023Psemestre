@@ -26,5 +26,22 @@ namespace ProjetoPimUnip2023Psemestre
         {
 
         }
+
+        private void dgvListaFuncio_VisibleChanged(object sender, EventArgs e)
+        {
+            string comandoSql = "SELECT * FROM horarioponto;";
+            Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
+            dgvListaFuncio.DataSource = objetoConexao.incluirInfoDgvColaboradores(comandoSql);
+        }
+
+        private void Ponto_horarios_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

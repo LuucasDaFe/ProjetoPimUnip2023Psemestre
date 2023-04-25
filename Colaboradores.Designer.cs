@@ -34,28 +34,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnFecharPainelFuncionario = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDemissoes = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.btnColaboradores = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvListaFuncio = new System.Windows.Forms.DataGridView();
-            this.Colaborador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Depatamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gestor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoleriteDoMes = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pastaHolerite = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnPesquisarColaborador = new System.Windows.Forms.PictureBox();
             this.btnPesquisa = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.barraPesquisaColaborador = new System.Windows.Forms.TextBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
@@ -63,7 +53,7 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaFuncio)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPesquisarColaborador)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFecharPainelFuncionario
@@ -80,8 +70,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnDemissoes);
             this.panel1.Controls.Add(this.btnColaboradores);
             this.panel1.Controls.Add(this.btnFecharPainelFuncionario);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -92,23 +81,24 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button2
+            // btnDemissoes
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.ImageIndex = 13;
-            this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(479, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(204, 70);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Demissões";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDemissoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDemissoes.FlatAppearance.BorderSize = 0;
+            this.btnDemissoes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDemissoes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnDemissoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDemissoes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemissoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDemissoes.ImageIndex = 13;
+            this.btnDemissoes.ImageList = this.imageList1;
+            this.btnDemissoes.Location = new System.Drawing.Point(275, 0);
+            this.btnDemissoes.Name = "btnDemissoes";
+            this.btnDemissoes.Size = new System.Drawing.Size(204, 70);
+            this.btnDemissoes.TabIndex = 4;
+            this.btnDemissoes.Text = "Demissões";
+            this.btnDemissoes.UseVisualStyleBackColor = true;
+            this.btnDemissoes.Click += new System.EventHandler(this.button2_Click);
             // 
             // imageList1
             // 
@@ -129,24 +119,6 @@
             this.imageList1.Images.SetKeyName(12, "Imagem_Icone_holerite (2).png");
             this.imageList1.Images.SetKeyName(13, "Imagem_Icone_Funcionarios.png");
             this.imageList1.Images.SetKeyName(14, "Imagem_Icone_Registros.png");
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageIndex = 13;
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(286, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 70);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Adimssão";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnColaboradores
             // 
@@ -190,122 +162,78 @@
             // 
             // dgvListaFuncio
             // 
-            this.dgvListaFuncio.AllowUserToOrderColumns = true;
+            this.dgvListaFuncio.AllowUserToAddRows = false;
+            this.dgvListaFuncio.AllowUserToDeleteRows = false;
+            this.dgvListaFuncio.AllowUserToResizeColumns = false;
+            this.dgvListaFuncio.AllowUserToResizeRows = false;
+            this.dgvListaFuncio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaFuncio.BackgroundColor = System.Drawing.Color.White;
             this.dgvListaFuncio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgvListaFuncio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuText;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvListaFuncio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListaFuncio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaFuncio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Colaborador,
-            this.Cargo,
-            this.Depatamento,
-            this.Gestor,
-            this.Identificador,
-            this.HoleriteDoMes,
-            this.pastaHolerite});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListaFuncio.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListaFuncio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListaFuncio.Location = new System.Drawing.Point(0, 0);
             this.dgvListaFuncio.Name = "dgvListaFuncio";
+            this.dgvListaFuncio.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListaFuncio.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgvListaFuncio.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListaFuncio.Size = new System.Drawing.Size(1167, 663);
             this.dgvListaFuncio.TabIndex = 0;
             this.dgvListaFuncio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaFuncio_CellContentClick);
-            // 
-            // Colaborador
-            // 
-            this.Colaborador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Colaborador.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Colaborador.HeaderText = "Colaborador";
-            this.Colaborador.Name = "Colaborador";
-            this.Colaborador.Width = 200;
-            // 
-            // Cargo
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cargo.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Cargo.HeaderText = "Cargo";
-            this.Cargo.Name = "Cargo";
-            this.Cargo.Width = 220;
-            // 
-            // Depatamento
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Depatamento.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Depatamento.HeaderText = "Departamento";
-            this.Depatamento.Name = "Depatamento";
-            this.Depatamento.Width = 202;
-            // 
-            // Gestor
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gestor.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Gestor.HeaderText = "Gestor";
-            this.Gestor.Name = "Gestor";
-            this.Gestor.Width = 250;
-            // 
-            // Identificador
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Transparent;
-            this.Identificador.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Identificador.HeaderText = "Identificador";
-            this.Identificador.Name = "Identificador";
-            // 
-            // HoleriteDoMes
-            // 
-            this.HoleriteDoMes.HeaderText = "Do Mes";
-            this.HoleriteDoMes.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagem_Icon_verficar;
-            this.HoleriteDoMes.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.HoleriteDoMes.Name = "HoleriteDoMes";
-            this.HoleriteDoMes.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.HoleriteDoMes.Width = 50;
-            // 
-            // pastaHolerite
-            // 
-            this.pastaHolerite.HeaderText = "Todos";
-            this.pastaHolerite.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagem_Icon_Pastas;
-            this.pastaHolerite.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.pastaHolerite.Name = "pastaHolerite";
-            this.pastaHolerite.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.pastaHolerite.Width = 50;
+            this.dgvListaFuncio.VisibleChanged += new System.EventHandler(this.dgvListaFuncio_VisibleChanged);
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.btnPesquisarColaborador);
             this.panel3.Controls.Add(this.btnPesquisa);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.barraPesquisaColaborador);
             this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1167, 55);
             this.panel3.TabIndex = 0;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // pictureBox1
+            // btnPesquisarColaborador
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(486, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.btnPesquisarColaborador.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnPesquisarColaborador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPesquisarColaborador.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarColaborador.Image")));
+            this.btnPesquisarColaborador.Location = new System.Drawing.Point(486, 10);
+            this.btnPesquisarColaborador.Name = "btnPesquisarColaborador";
+            this.btnPesquisarColaborador.Size = new System.Drawing.Size(61, 26);
+            this.btnPesquisarColaborador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnPesquisarColaborador.TabIndex = 1;
+            this.btnPesquisarColaborador.TabStop = false;
+            this.btnPesquisarColaborador.Click += new System.EventHandler(this.btnPesquisarColaborador_Click);
             // 
             // btnPesquisa
             // 
@@ -321,13 +249,13 @@
             this.btnPesquisa.Text = "Iniciar nova Admissão";
             this.btnPesquisa.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // barraPesquisaColaborador
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(147, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(400, 26);
-            this.textBox1.TabIndex = 0;
+            this.barraPesquisaColaborador.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barraPesquisaColaborador.Location = new System.Drawing.Point(147, 10);
+            this.barraPesquisaColaborador.Name = "barraPesquisaColaborador";
+            this.barraPesquisaColaborador.Size = new System.Drawing.Size(400, 26);
+            this.barraPesquisaColaborador.TabIndex = 0;
             // 
             // dataGridViewImageColumn1
             // 
@@ -366,7 +294,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaFuncio)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPesquisarColaborador)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,23 +304,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnColaboradores;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDemissoes;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox barraPesquisaColaborador;
+        private System.Windows.Forms.PictureBox btnPesquisarColaborador;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnPesquisa;
         private System.Windows.Forms.DataGridView dgvListaFuncio;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Colaborador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Depatamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gestor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Identificador;
-        private System.Windows.Forms.DataGridViewImageColumn HoleriteDoMes;
-        private System.Windows.Forms.DataGridViewImageColumn pastaHolerite;
     }
 }
