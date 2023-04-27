@@ -31,10 +31,26 @@ namespace ProjetoPimUnip2023Psemestre
         {
 
         }
+        private void abrirFormNoPainel(object formFilho)
+        {
+            if (this.containerInfoRegistro.Controls.Count > 0)
+                this.containerInfoRegistro.Controls.RemoveAt(0);
+            Form frm = formFilho as Form;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            this.containerInfoRegistro.Controls.Add(frm);
+            this.containerInfoRegistro.Tag = frm;
+            frm.Show();
 
+        }
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
            
+        }
+
+        private void containerInfoRegistro_VisibleChanged(object sender, EventArgs e)
+        {
+            abrirFormNoPainel(new InformacoesResgitro());
         }
     }
 }
