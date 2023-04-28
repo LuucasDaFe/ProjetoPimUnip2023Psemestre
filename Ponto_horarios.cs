@@ -29,7 +29,7 @@ namespace ProjetoPimUnip2023Psemestre
 
         private void dgvListaFuncio_VisibleChanged(object sender, EventArgs e)
         {
-            string comandoSql = "SELECT * FROM horarioponto;";
+            string comandoSql = "SELECT * FROM horarios;";
             Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
             dgvListaFuncio.DataSource = objetoConexao.incluirInfoDgvColaboradores(comandoSql);
         }

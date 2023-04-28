@@ -42,7 +42,9 @@ namespace ProjetoPimUnip2023Psemestre
             //Verificar qual coluna vai ser clicada.
             if (dgvHoleriteFuncionario.Columns[e.ColumnIndex] == dgvHoleriteFuncionario.Columns["HoleriteDoMes"])
             {
-
+                Classes.GerandoPDF gerandoPDF = new Classes.GerandoPDF();
+                gerandoPDF.gerandoPdfHolerite();
+                gerandoPDF.abrindoPDF();
             }
         }
 
@@ -72,7 +74,8 @@ namespace ProjetoPimUnip2023Psemestre
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
             Classes.GerandoPDF gerandoPDF = new Classes.GerandoPDF();
-            gerandoPDF.abrirPdfHolerite();
+            gerandoPDF.gerandoPdfHolerite();
+            gerandoPDF.abrindoPDF();
         }
     }
 }
