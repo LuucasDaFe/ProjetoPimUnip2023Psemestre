@@ -73,9 +73,7 @@ namespace ProjetoPimUnip2023Psemestre
 
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
-            Classes.GerandoPDF gerandoPDF = new Classes.GerandoPDF();
-            gerandoPDF.gerandoPdfHolerite();
-            gerandoPDF.abrindoPDF();
+    
         }
     }
 }

@@ -21,6 +21,16 @@ namespace ProjetoPimUnip2023Psemestre.Classes
 
         string correnteConexao = "server=" + servidor + ";" + "port=" + porta + ";" + "user id=" + usuario + ";" + "password=" + senha + ";" + "database=" + bancoDeDados + ";";
 
+
+            static string server = "localhost";
+            static string bd = "teste2";
+            static string user = "postgres";
+            static string password = "cr7melhor";
+            static string port = "5432";
+
+            string conectBDPim = "server=" + server + ";" + "port=" + port + ";" + "user id=" + user + ";" + "password=" + password + ";" + "database=" + bd + ";";
+
+
         public NpgsqlConnection estabelecerConexao()
         {
             try
@@ -116,6 +126,31 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             dados.Fill(resultado);
             conex.Close();
             return resultado;
+        }
+
+
+        string horaEntrada;
+        public string calculaSalario()
+        {
+            string hEntrada = "SELECT hora_entrada, hora_saida FROM registro";
+            conex.ConnectionString = conectBDPim;
+            NpgsqlCommand cmd = new NpgsqlCommand(hEntrada, conex);
+            conex.Open();
+            NpgsqlDataReader ler = cmd.ExecuteReader();
+
+
+          
+            while (ler.Read())
+            {
+                TimeSpan entrada = ler.GetTimeSpan(0);
+                TimeSpan saida = ler.GetTimeSpan(1);
+
+                var tempo = saida - entrada;
+                horaEntrada = tempo.TotalHours.ToString();
+            }
+
+            conex.Close();
+            return horaEntrada;
         }
     }
 }

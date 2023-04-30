@@ -93,7 +93,8 @@ namespace ProjetoPimUnip2023Psemestre
         private void button5_Click(object sender, EventArgs e)
         {
             Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
-            objetoConexao.estabelecerConexao();
+            //objetoConexao.estabelecerConexao();
+            MessageBox.Show(objetoConexao.calculaSalario());
         }
 
         private void ImgLanche_Click(object sender, EventArgs e)
