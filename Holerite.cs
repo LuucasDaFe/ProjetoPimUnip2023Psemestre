@@ -30,21 +30,23 @@ namespace ProjetoPimUnip2023Psemestre
 
         private void dgvListaFuncio_VisibleChanged(object sender, EventArgs e)
         {
-            string comandoSql = "SELECT * FROM holerite;";
+            string comandoSql = "SELECT * FROM funcionario;";
             Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
             dgvHoleriteFuncionario.DataSource = objetoConexao.incluirInfoDgvColaboradores(comandoSql);
         }
-        int idFuncionario;
+        string idFuncionario;
+        string nomeFuncionario;
         private void dgvListaFuncio_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Pegando ID do funcionario
-            idFuncionario = Convert.ToInt32(dgvHoleriteFuncionario.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            //Pegando ID e nome do funcionario
+            //idFuncionario = Convert.ToInt32(dgvHoleriteFuncionario.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            idFuncionario = (dgvHoleriteFuncionario.Rows[e.RowIndex].Cells["id"].Value.ToString());
+            nomeFuncionario = dgvHoleriteFuncionario.Rows[e.RowIndex].Cells["nome"].Value.ToString();
             //Verificar qual coluna vai ser clicada.
             if (dgvHoleriteFuncionario.Columns[e.ColumnIndex] == dgvHoleriteFuncionario.Columns["HoleriteDoMes"])
             {
                 Classes.GerandoPDF gerandoPDF = new Classes.GerandoPDF();
-                gerandoPDF.gerandoPdfHolerite();
-                gerandoPDF.abrindoPDF();
+                gerandoPDF.gerandoPdfHolerite(idFuncionario, nomeFuncionario);
             }
         }
 
@@ -55,10 +57,10 @@ namespace ProjetoPimUnip2023Psemestre
                 switch (coluna.Name)
                 {
                     case "HoleriteDoMes":
-                        coluna.DisplayIndex = 3;
+                        coluna.DisplayIndex = 2;
                         break;
                     case "pastaHolerite":
-                        coluna.DisplayIndex = 4;
+                        coluna.DisplayIndex = 3;
                         break;
                 }
             }

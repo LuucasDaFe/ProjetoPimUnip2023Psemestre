@@ -101,8 +101,7 @@ namespace ProjetoPimUnip2023Psemestre.Classes
         }
 
         public DataTable incluirInfoDgvColaboradores(string comandoSql)
-        {
-            
+        {           
             conex.ConnectionString = correnteConexao;
             NpgsqlCommand conector = new NpgsqlCommand(comandoSql, conex);
             conex.Open();
@@ -129,28 +128,57 @@ namespace ProjetoPimUnip2023Psemestre.Classes
         }
 
 
-        string horaEntrada;
-        public string calculaSalario()
+        string horaTrabalho;
+        public string calculaHora(string Id_funcionario)
         {
-            string hEntrada = "SELECT hora_entrada, hora_saida FROM registro";
-            conex.ConnectionString = conectBDPim;
-            NpgsqlCommand cmd = new NpgsqlCommand(hEntrada, conex);
+            
+            string comandoH = "SELECT hora_entrada, hora_saida, hora_inicio_intervalo, hora_fim_intervalo FROM horarios WHERE id_funcionario = "+ Id_funcionario + ";";
+            conex.ConnectionString = correnteConexao;
+            NpgsqlCommand cmd = new NpgsqlCommand(comandoH, conex);
             conex.Open();
             NpgsqlDataReader ler = cmd.ExecuteReader();
 
+            TimeSpan tempo = TimeSpan.Zero;
 
-          
             while (ler.Read())
             {
                 TimeSpan entrada = ler.GetTimeSpan(0);
                 TimeSpan saida = ler.GetTimeSpan(1);
-
-                var tempo = saida - entrada;
-                horaEntrada = tempo.TotalHours.ToString();
+                TimeSpan almoco = ler.GetTimeSpan(2);
+                TimeSpan almoco2 = ler.GetTimeSpan(3);
+            
+                tempo += (saida - entrada) - (almoco2 - almoco);
+                horaTrabalho = tempo.TotalHours.ToString();               
             }
 
             conex.Close();
-            return horaEntrada;
+            return horaTrabalho;
         }
+
+
+        float salarioHora;
+        public float calculaSalario(string Id_funcionario)
+        {
+
+            string comandoH = "SELECT salario FROM registro WHERE id_funcionario = " + Id_funcionario + ";";
+            conex.ConnectionString = correnteConexao;
+            NpgsqlCommand cmd = new NpgsqlCommand(comandoH, conex);
+            conex.Open();
+            NpgsqlDataReader ler = cmd.ExecuteReader();
+
+            float salarioX;
+
+            while (ler.Read())
+            {
+                float salarioNoRegistro = ler.GetFloat(0);
+                salarioX = salarioNoRegistro / 220;
+                salarioHora = salarioX;
+            }
+
+            conex.Close();            
+            return salarioHora;
+        }
+
+
     }
 }

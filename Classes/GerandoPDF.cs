@@ -12,8 +12,17 @@ namespace ProjetoPimUnip2023Psemestre.Classes
 {
     internal class GerandoPDF
     {
-        public void gerandoPdfHolerite()
+        public void gerandoPdfHolerite(string id, string nome)
         {
+            Classes.ConexaoBd dadosBD = new Classes.ConexaoBd();
+
+
+            float HoraMes = Convert.ToSingle(dadosBD.calculaHora(id));
+            float salarioHora = dadosBD.calculaSalario(id);
+
+            float salarioDoRegistro = salarioHora * 220;
+            float salarioMes = HoraMes * salarioHora;
+
             string nomeArquivo = @"C:\Users\Lucas\Desktop\PIM 1° SEMESTRE\ProjetoPimUnip2023Psemestre\Holerites\Lucas\\holerite.pdf";
             FileStream ArquivoPDF = new FileStream(nomeArquivo, FileMode.Create);
             Document doc = new Document(PageSize.A4);
@@ -68,7 +77,7 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             Paragraph paragrafo9 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
             Paragraph paragrafo10 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
             paragrafo6.Add("ID");
-            paragrafo7.Add("Lucas");
+            paragrafo7.Add(nome);
             paragrafo8.Add("xx/xx/xxxx");
             paragrafo9.Add("SERVICEDESK");
             paragrafo10.Add("CCO");
@@ -95,13 +104,13 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             tabela3.AddCell(vencimentoSAL);
             tabela3.AddCell(descontoSAL);
 
-            Paragraph nCod = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
-            Paragraph valorDescricao = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
-            Paragraph valorReferencia = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
-            Paragraph valorVencimento = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
-            Paragraph valorDesconto = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
+            Paragraph nCod = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 6, (int)System.Drawing.FontStyle.Regular));
+            Paragraph valorDescricao = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 6, (int)System.Drawing.FontStyle.Regular));
+            Paragraph valorReferencia = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 6, (int)System.Drawing.FontStyle.Regular));
+            Paragraph valorVencimento = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 6, (int)System.Drawing.FontStyle.Regular));
+            Paragraph valorDesconto = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 6, (int)System.Drawing.FontStyle.Regular));
             nCod.Add("xx");//varrial coodigo holerite
-            valorDescricao.Add("SALARIO \nINSS \nIRFF");// variavel descricao holerite
+            valorDescricao.Add($"SALARIO:{salarioMes:F2} R$ \nINSS \nIRFF");// variavel descricao holerite
             valorReferencia.Add("xx\nxx\nxxxx"); // variavel referencia holerite
             valorVencimento.Add("N Valor"); // variavel vencimento do holerite
             valorDesconto.Add("N Valor"); //varial desconto do holerite
@@ -133,7 +142,7 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             Paragraph VcalcFgts = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
             Paragraph VfgtsMes = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
             Paragraph VbaseCalcIrrf = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
-            Vsalario.Add("1000");//varrial salrio holerite
+            Vsalario.Add(salarioDoRegistro.ToString());//varrial salrio holerite
             VcontrInss.Add("1055");// variavel Inss holerite
             VcalcFgts.Add("150"); // variavel fgts holerite
             VfgtsMes.Add("150r"); // variavel fgts do mes do holerite
@@ -153,7 +162,7 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             dataAssi.Add("  /  /   ");
 
             doc.Open();
-            doc.Add(logo); ;
+            doc.Add(logo); 
             doc.Add(paragrafo);
             doc.Add(tabela1);
             doc.Add(tabela2);
@@ -162,10 +171,7 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             doc.Add(Assimatura);
             doc.Add(dataAssi);
             doc.Close();
-        }
 
-        public void abrindoPDF()
-        {
             System.Diagnostics.Process.Start("C:\\Users\\Lucas\\Desktop\\PIM 1° SEMESTRE\\ProjetoPimUnip2023Psemestre\\Holerites\\Lucas\\\\holerite.pdf");
         }
     }
