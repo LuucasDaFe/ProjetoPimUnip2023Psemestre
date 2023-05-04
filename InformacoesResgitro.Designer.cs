@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnFecharPainelFuncionario = new System.Windows.Forms.Label();
+            this.infoEstado = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.InfoRegistroEmail = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -67,20 +70,17 @@
             this.label17 = new System.Windows.Forms.Label();
             this.InfoRegistroDataAdimssao = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.InfoRegistroExameMedico = new System.Windows.Forms.TextBox();
+            this.InfoRegistroSexo = new System.Windows.Forms.TextBox();
             this.infoSexo = new System.Windows.Forms.Label();
             this.InfoRegistroNacionalidade = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.InfoRegistroContaBanco = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.InfoRegistroSalarioInicial = new System.Windows.Forms.TextBox();
+            this.InfoSalario = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.InfoRegistroAgenciaBanco = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.infoEstado = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.InfoExameMedico = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgregistroFuncionario)).BeginInit();
             this.SuspendLayout();
@@ -88,6 +88,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnFecharPainelFuncionario);
             this.panel1.Controls.Add(this.infoEstado);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.panel2);
@@ -120,7 +121,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1121, 226);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnFecharPainelFuncionario
+            // 
+            this.btnFecharPainelFuncionario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFecharPainelFuncionario.AutoSize = true;
+            this.btnFecharPainelFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFecharPainelFuncionario.ForeColor = System.Drawing.Color.Red;
+            this.btnFecharPainelFuncionario.Location = new System.Drawing.Point(1096, 9);
+            this.btnFecharPainelFuncionario.Name = "btnFecharPainelFuncionario";
+            this.btnFecharPainelFuncionario.Size = new System.Drawing.Size(16, 16);
+            this.btnFecharPainelFuncionario.TabIndex = 33;
+            this.btnFecharPainelFuncionario.Text = "X";
+            this.btnFecharPainelFuncionario.Click += new System.EventHandler(this.btnFecharPainelFuncionario_Click);
+            // 
+            // infoEstado
+            // 
+            this.infoEstado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoEstado.Location = new System.Drawing.Point(915, 87);
+            this.infoEstado.Name = "infoEstado";
+            this.infoEstado.Size = new System.Drawing.Size(195, 26);
+            this.infoEstado.TabIndex = 32;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(841, 90);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(62, 20);
+            this.label19.TabIndex = 31;
+            this.label19.Text = "Estado:";
             // 
             // panel2
             // 
@@ -131,7 +162,6 @@
             // 
             // InfoRegistroEmail
             // 
-            this.InfoRegistroEmail.Enabled = false;
             this.InfoRegistroEmail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroEmail.Location = new System.Drawing.Point(277, 193);
             this.InfoRegistroEmail.Name = "InfoRegistroEmail";
@@ -150,7 +180,6 @@
             // 
             // InfoRegistroContato
             // 
-            this.InfoRegistroContato.Enabled = false;
             this.InfoRegistroContato.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroContato.Location = new System.Drawing.Point(779, 192);
             this.InfoRegistroContato.Name = "InfoRegistroContato";
@@ -169,7 +198,6 @@
             // 
             // InfoRegistroEstadoCivil
             // 
-            this.InfoRegistroEstadoCivil.Enabled = false;
             this.InfoRegistroEstadoCivil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroEstadoCivil.Location = new System.Drawing.Point(321, 161);
             this.InfoRegistroEstadoCivil.Name = "InfoRegistroEstadoCivil";
@@ -188,7 +216,6 @@
             // 
             // InfoRegistroNomePai
             // 
-            this.InfoRegistroNomePai.Enabled = false;
             this.InfoRegistroNomePai.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroNomePai.Location = new System.Drawing.Point(744, 129);
             this.InfoRegistroNomePai.Name = "InfoRegistroNomePai";
@@ -207,7 +234,6 @@
             // 
             // InforegistroNomeMae
             // 
-            this.InforegistroNomeMae.Enabled = false;
             this.InforegistroNomeMae.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InforegistroNomeMae.Location = new System.Drawing.Point(311, 129);
             this.InforegistroNomeMae.Name = "InforegistroNomeMae";
@@ -226,7 +252,6 @@
             // 
             // infoCpf
             // 
-            this.infoCpf.Enabled = false;
             this.infoCpf.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoCpf.Location = new System.Drawing.Point(506, 84);
             this.infoCpf.Name = "infoCpf";
@@ -245,7 +270,6 @@
             // 
             // InfoRegistroRG
             // 
-            this.InfoRegistroRG.Enabled = false;
             this.InfoRegistroRG.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroRG.Location = new System.Drawing.Point(266, 84);
             this.InfoRegistroRG.Name = "InfoRegistroRG";
@@ -264,7 +288,6 @@
             // 
             // infoRegistroDataNasc
             // 
-            this.infoRegistroDataNasc.Enabled = false;
             this.infoRegistroDataNasc.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoRegistroDataNasc.Location = new System.Drawing.Point(862, 17);
             this.infoRegistroDataNasc.Name = "infoRegistroDataNasc";
@@ -283,7 +306,6 @@
             // 
             // InfoRegistroNumeroEnd
             // 
-            this.InfoRegistroNumeroEnd.Enabled = false;
             this.InfoRegistroNumeroEnd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroNumeroEnd.Location = new System.Drawing.Point(733, 52);
             this.InfoRegistroNumeroEnd.Name = "InfoRegistroNumeroEnd";
@@ -303,7 +325,6 @@
             // 
             // InfoRegistroCidade
             // 
-            this.InfoRegistroCidade.Enabled = false;
             this.InfoRegistroCidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroCidade.Location = new System.Drawing.Point(915, 52);
             this.InfoRegistroCidade.Name = "InfoRegistroCidade";
@@ -322,7 +343,6 @@
             // 
             // InfoRegistroEndereco
             // 
-            this.InfoRegistroEndereco.Enabled = false;
             this.InfoRegistroEndereco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroEndereco.Location = new System.Drawing.Point(311, 52);
             this.InfoRegistroEndereco.Name = "InfoRegistroEndereco";
@@ -341,12 +361,12 @@
             // 
             // InfoRegistroNome
             // 
-            this.InfoRegistroNome.Enabled = false;
             this.InfoRegistroNome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroNome.Location = new System.Drawing.Point(283, 14);
             this.InfoRegistroNome.Name = "InfoRegistroNome";
             this.InfoRegistroNome.Size = new System.Drawing.Size(405, 26);
             this.InfoRegistroNome.TabIndex = 5;
+            this.InfoRegistroNome.TextChanged += new System.EventHandler(this.InfoRegistroNome_TextChanged);
             // 
             // label1
             // 
@@ -371,7 +391,6 @@
             // 
             // InfoRegistroId
             // 
-            this.InfoRegistroId.Enabled = false;
             this.InfoRegistroId.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroId.Location = new System.Drawing.Point(56, 288);
             this.InfoRegistroId.Name = "InfoRegistroId";
@@ -390,7 +409,6 @@
             // 
             // InfoNumeroRegistro
             // 
-            this.InfoNumeroRegistro.Enabled = false;
             this.InfoNumeroRegistro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoNumeroRegistro.Location = new System.Drawing.Point(121, 250);
             this.InfoNumeroRegistro.Name = "InfoNumeroRegistro";
@@ -409,7 +427,6 @@
             // 
             // InfoRegistroTituloEleitor
             // 
-            this.InfoRegistroTituloEleitor.Enabled = false;
             this.InfoRegistroTituloEleitor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroTituloEleitor.Location = new System.Drawing.Point(795, 256);
             this.InfoRegistroTituloEleitor.Name = "InfoRegistroTituloEleitor";
@@ -428,7 +445,6 @@
             // 
             // InfoRegistroCNH
             // 
-            this.InfoRegistroCNH.Enabled = false;
             this.InfoRegistroCNH.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroCNH.Location = new System.Drawing.Point(439, 253);
             this.InfoRegistroCNH.Name = "InfoRegistroCNH";
@@ -447,7 +463,6 @@
             // 
             // InfoRegistroDepartamento
             // 
-            this.InfoRegistroDepartamento.Enabled = false;
             this.InfoRegistroDepartamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroDepartamento.Location = new System.Drawing.Point(833, 291);
             this.InfoRegistroDepartamento.Name = "InfoRegistroDepartamento";
@@ -466,7 +481,6 @@
             // 
             // InfoRegistroDataAdimssao
             // 
-            this.InfoRegistroDataAdimssao.Enabled = false;
             this.InfoRegistroDataAdimssao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroDataAdimssao.Location = new System.Drawing.Point(295, 288);
             this.InfoRegistroDataAdimssao.Name = "InfoRegistroDataAdimssao";
@@ -483,14 +497,13 @@
             this.label18.TabIndex = 16;
             this.label18.Text = "Data de admissão:";
             // 
-            // InfoRegistroExameMedico
+            // InfoRegistroSexo
             // 
-            this.InfoRegistroExameMedico.Enabled = false;
-            this.InfoRegistroExameMedico.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroExameMedico.Location = new System.Drawing.Point(804, 328);
-            this.InfoRegistroExameMedico.Name = "InfoRegistroExameMedico";
-            this.InfoRegistroExameMedico.Size = new System.Drawing.Size(250, 26);
-            this.InfoRegistroExameMedico.TabIndex = 23;
+            this.InfoRegistroSexo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InfoRegistroSexo.Location = new System.Drawing.Point(804, 328);
+            this.InfoRegistroSexo.Name = "InfoRegistroSexo";
+            this.InfoRegistroSexo.Size = new System.Drawing.Size(250, 26);
+            this.InfoRegistroSexo.TabIndex = 23;
             // 
             // infoSexo
             // 
@@ -504,7 +517,6 @@
             // 
             // InfoRegistroNacionalidade
             // 
-            this.InfoRegistroNacionalidade.Enabled = false;
             this.InfoRegistroNacionalidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroNacionalidade.Location = new System.Drawing.Point(151, 322);
             this.InfoRegistroNacionalidade.Name = "InfoRegistroNacionalidade";
@@ -523,7 +535,6 @@
             // 
             // InfoRegistroContaBanco
             // 
-            this.InfoRegistroContaBanco.Enabled = false;
             this.InfoRegistroContaBanco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroContaBanco.Location = new System.Drawing.Point(667, 366);
             this.InfoRegistroContaBanco.Name = "InfoRegistroContaBanco";
@@ -540,14 +551,13 @@
             this.label21.TabIndex = 26;
             this.label21.Text = "Conta banco:";
             // 
-            // InfoRegistroSalarioInicial
+            // InfoSalario
             // 
-            this.InfoRegistroSalarioInicial.Enabled = false;
-            this.InfoRegistroSalarioInicial.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroSalarioInicial.Location = new System.Drawing.Point(92, 366);
-            this.InfoRegistroSalarioInicial.Name = "InfoRegistroSalarioInicial";
-            this.InfoRegistroSalarioInicial.Size = new System.Drawing.Size(405, 26);
-            this.InfoRegistroSalarioInicial.TabIndex = 25;
+            this.InfoSalario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InfoSalario.Location = new System.Drawing.Point(95, 366);
+            this.InfoSalario.Name = "InfoSalario";
+            this.InfoSalario.Size = new System.Drawing.Size(233, 26);
+            this.InfoSalario.TabIndex = 25;
             // 
             // label22
             // 
@@ -561,7 +571,6 @@
             // 
             // InfoRegistroAgenciaBanco
             // 
-            this.InfoRegistroAgenciaBanco.Enabled = false;
             this.InfoRegistroAgenciaBanco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoRegistroAgenciaBanco.Location = new System.Drawing.Point(924, 369);
             this.InfoRegistroAgenciaBanco.Name = "InfoRegistroAgenciaBanco";
@@ -578,59 +587,33 @@
             this.label23.TabIndex = 28;
             this.label23.Text = "Agencia:";
             // 
-            // infoEstado
+            // button1
             // 
-            this.infoEstado.Enabled = false;
-            this.infoEstado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoEstado.Location = new System.Drawing.Point(915, 87);
-            this.infoEstado.Name = "infoEstado";
-            this.infoEstado.Size = new System.Drawing.Size(195, 26);
-            this.infoEstado.TabIndex = 32;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(841, 90);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(62, 20);
-            this.label19.TabIndex = 31;
-            this.label19.Text = "Estado:";
-            // 
-            // InfoExameMedico
-            // 
-            this.InfoExameMedico.Enabled = false;
-            this.InfoExameMedico.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoExameMedico.Location = new System.Drawing.Point(158, 398);
-            this.InfoExameMedico.Name = "InfoExameMedico";
-            this.InfoExameMedico.Size = new System.Drawing.Size(238, 26);
-            this.InfoExameMedico.TabIndex = 31;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(27, 404);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(121, 20);
-            this.label24.TabIndex = 30;
-            this.label24.Text = "Exame médico:";
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(468, 414);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(256, 34);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Adicionar Funcionarios";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // InformacoesResgitro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1122, 445);
-            this.Controls.Add(this.InfoExameMedico);
-            this.Controls.Add(this.label24);
+            this.ClientSize = new System.Drawing.Size(1118, 460);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.InfoRegistroAgenciaBanco);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.InfoRegistroContaBanco);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.InfoRegistroSalarioInicial);
+            this.Controls.Add(this.InfoSalario);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.InfoRegistroExameMedico);
+            this.Controls.Add(this.InfoRegistroSexo);
             this.Controls.Add(this.infoSexo);
             this.Controls.Add(this.InfoRegistroNacionalidade);
             this.Controls.Add(this.label20);
@@ -700,19 +683,19 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox InfoRegistroDataAdimssao;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox InfoRegistroExameMedico;
+        private System.Windows.Forms.TextBox InfoRegistroSexo;
         private System.Windows.Forms.Label infoSexo;
         private System.Windows.Forms.TextBox InfoRegistroNacionalidade;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox InfoRegistroContaBanco;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox InfoRegistroSalarioInicial;
+        private System.Windows.Forms.TextBox InfoSalario;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox InfoRegistroAgenciaBanco;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox infoEstado;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox InfoExameMedico;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label btnFecharPainelFuncionario;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -248,6 +248,7 @@
             this.btnPesquisa.TabIndex = 1;
             this.btnPesquisa.Text = "Iniciar nova Admissão";
             this.btnPesquisa.UseVisualStyleBackColor = false;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
             // 
             // barraPesquisaColaborador
             // 

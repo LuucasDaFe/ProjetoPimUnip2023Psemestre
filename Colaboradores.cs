@@ -87,5 +87,11 @@ namespace ProjetoPimUnip2023Psemestre
         {
 
         }
+
+        private void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            InformacoesResgitro info_funcio = new InformacoesResgitro();
+            info_funcio.ShowDialog();
+        }
     }
 }
