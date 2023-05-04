@@ -44,9 +44,11 @@ namespace ProjetoPimUnip2023Psemestre
 
         private void btnColaboradores_Click(object sender, EventArgs e)
         {
+            alteracao_funcionario alteracao_Funcionario = new alteracao_funcionario();
+            alteracao_Funcionario.ShowDialog();
 
-            Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
-            dgvListaFuncio.DataSource = objetoConexao.statusFuncionarios("true");
+            //Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
+            //dgvListaFuncio.DataSource = objetoConexao.statusFuncionarios("true");
         }
 
         private void lblQuantidadeFuncio_Click(object sender, EventArgs e)

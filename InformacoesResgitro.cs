@@ -94,6 +94,7 @@ namespace ProjetoPimUnip2023Psemestre
             cmd.Parameters.AddWithValue("@agencia_banco", agencia);
 
             cmd.ExecuteNonQuery();
+            MessageBox.Show("Novo funcionario adcionado com sucesso!");
             conex.Close();
 
         }
@@ -164,31 +165,20 @@ namespace ProjetoPimUnip2023Psemestre
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             adicionaFuncionarioBd();
-
-
-
-
-            //NpgsqlConnection conex = new NpgsqlConnection();
-
-            //string server = "localhost";
-            //string bd = "teste2";
-            //string user = "postgres";
-            //string password = "cr7melhor";
-            //string port = "5432";
-
-            //string conectBDPim = "server=" + server + ";" + "port=" + port + ";" + "user id=" + user + ";" + "password=" + password + ";" + "database=" + bd + ";";
-
-            //string cmdInfFuncio = "SELECT idfuncionario, nome, sexo, cpf, nascimento, cidade, estado, rg, nome_mae, nome_pai, estado_civil, contato, email, cnh, titulo_eleitor, id_departamento FROM funcionario;";
-            //conex.ConnectionString = conectBDPim;
-            //NpgsqlCommand cmd = new NpgsqlCommand(cmdInfFuncio, conex);
-
-            //string cmdDepartamento = "INSERT INTO administrativo (data_adimssao, salario, agencia, conta_banco, banco, exame_medico, id_funcionario, id_registro FROM administrativo;";
-            //conex.ConnectionString = conectBDPim;
         }
 
         private void InfoRegistroNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void InfoSalario_TextChanged(object sender, EventArgs e)
         {
 
         }

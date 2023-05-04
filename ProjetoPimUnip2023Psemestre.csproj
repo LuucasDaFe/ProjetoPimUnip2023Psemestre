@@ -100,6 +100,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="alteracao_funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alteracao_funcionario.Designer.cs">
+      <DependentUpon>alteracao_funcionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\ConexaoBd.cs" />
     <Compile Include="Classes\GerandoPDF.cs" />
     <Compile Include="Colaboradores.cs">
@@ -140,6 +146,9 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="alteracao_funcionario.resx">
+      <DependentUpon>alteracao_funcionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Colaboradores.resx">
       <DependentUpon>Colaboradores.cs</DependentUpon>
     </EmbeddedResource>
