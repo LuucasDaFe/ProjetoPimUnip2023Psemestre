@@ -295,6 +295,7 @@
             this.painelContenedor.Name = "painelContenedor";
             this.painelContenedor.Size = new System.Drawing.Size(1034, 561);
             this.painelContenedor.TabIndex = 2;
+            this.painelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.painelContenedor_Paint);
             // 
             // Painel_Inicio
             // 

@@ -15,7 +15,9 @@ namespace ProjetoPimUnip2023Psemestre
     {
         public Painel_Inicio()
         {
-            InitializeComponent();
+           InitializeComponent();
+            Login l = new Login();
+            l.ShowDialog();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -111,6 +113,11 @@ namespace ProjetoPimUnip2023Psemestre
         private void btnFuncionarios_Click(object sender, EventArgs e)
         {
             abrirFormNoPainel(new Colaboradores());
+        }
+
+        private void painelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
