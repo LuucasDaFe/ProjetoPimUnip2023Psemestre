@@ -106,6 +106,12 @@
     <Compile Include="alteracao_funcionario.Designer.cs">
       <DependentUpon>alteracao_funcionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlteraPonto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlteraPonto.Designer.cs">
+      <DependentUpon>AlteraPonto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\ConexaoBd.cs" />
     <Compile Include="Classes\GerandoPDF.cs" />
     <Compile Include="Colaboradores.cs">
@@ -146,8 +152,17 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroFuncionario.Designer.cs">
+      <DependentUpon>RegistroFuncionario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="alteracao_funcionario.resx">
       <DependentUpon>alteracao_funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlteraPonto.resx">
+      <DependentUpon>AlteraPonto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Colaboradores.resx">
       <DependentUpon>Colaboradores.cs</DependentUpon>
@@ -176,6 +191,9 @@
     </Compile>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroFuncionario.resx">
+      <DependentUpon>RegistroFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

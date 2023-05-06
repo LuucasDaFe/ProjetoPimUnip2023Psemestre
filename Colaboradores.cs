@@ -75,14 +75,18 @@ namespace ProjetoPimUnip2023Psemestre
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
-            dgvListaFuncio.DataSource = objetoConexao.statusFuncionarios("false");
+            //Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
+            //dgvListaFuncio.DataSource = objetoConexao.statusFuncionarios("false");
+
+            InformacoesResgitro info_funcio = new InformacoesResgitro();
+            info_funcio.ShowDialog();
         }
 
         private void btnPesquisarColaborador_Click(object sender, EventArgs e)
         {
             Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
-            dgvListaFuncio.DataSource = objetoConexao.pesquisarColaborador(barraPesquisaColaborador.Text);
+            //dgvListaFuncio.DataSource = objetoConexao.pesquisarColaborador(barraPesquisaColaborador.Text);
+
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -92,8 +96,12 @@ namespace ProjetoPimUnip2023Psemestre
 
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
-            InformacoesResgitro info_funcio = new InformacoesResgitro();
-            info_funcio.ShowDialog();
+            
+        }
+
+        private void barraPesquisaColaborador_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

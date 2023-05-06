@@ -50,7 +50,7 @@ namespace ProjetoPimUnip2023Psemestre
 
         private void containerInfoRegistro_VisibleChanged(object sender, EventArgs e)
         {
-            abrirFormNoPainel(new InformacoesResgitro());
+            abrirFormNoPainel(new RegistroFuncionario());
         }
     }
 }

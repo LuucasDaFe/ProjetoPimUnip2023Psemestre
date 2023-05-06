@@ -43,5 +43,16 @@ namespace ProjetoPimUnip2023Psemestre
         {
 
         }
+
+        private void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            AlteraPonto alteraPonto = new AlteraPonto();
+            alteraPonto.ShowDialog();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

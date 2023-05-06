@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace ProjetoPimUnip2023Psemestre
 {
@@ -30,7 +31,8 @@ namespace ProjetoPimUnip2023Psemestre
 
         private void dgvListaFuncio_VisibleChanged(object sender, EventArgs e)
         {
-            string comandoSql = "SELECT * FROM funcionario;";
+            //
+            string comandoSql = "SELECT id, nome, cargo, departamento FROM funcionario;";
             Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
             dgvHoleriteFuncionario.DataSource = objetoConexao.incluirInfoDgvColaboradores(comandoSql);
         }
@@ -57,10 +59,10 @@ namespace ProjetoPimUnip2023Psemestre
                 switch (coluna.Name)
                 {
                     case "HoleriteDoMes":
-                        coluna.DisplayIndex = 2;
+                        coluna.DisplayIndex = 4;
                         break;
                     case "pastaHolerite":
-                        coluna.DisplayIndex = 3;
+                        coluna.DisplayIndex = 5;
                         break;
                 }
             }
