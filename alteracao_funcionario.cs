@@ -136,48 +136,31 @@ namespace ProjetoPimUnip2023Psemestre
             alterarFuncionario(nome);
             lipaCampo();
         }
-        public void pesquisarParaConsultar(string nome)
+        public void consultarFuncionario() 
         {
-            NpgsqlConnection conex = new NpgsqlConnection();
+            //string condicao = barraPesquisaConsulta.Text;
+            //string nome = "nome";
+            //string email = "email";
+            //string contato = "contato";
+            //string endereo = ""
 
-            string server = "localhost";
-            string bd = "sistemaholerite";
-            string user = "postgres";
-            string password = "cr7melhor";
-            string port = "5432";
+            Classes.ConexaoBd con = new Classes.ConexaoBd();
 
-            string conectBDPim = "server=" + server + ";" + "port=" + port + ";" + "user id=" + user + ";" + "password=" + password + ";" + "database=" + bd + ";";
-
-            string comando = "SELECT nome, email, telefone, endereco, departamento, cargo, salario, conta_banco, agencia_banco FROM funcionario WHERE nome = @nome;";
-
-            conex.ConnectionString = conectBDPim;
-            NpgsqlCommand cmd = new NpgsqlCommand(comando, conex);
-
-            conex.Open();
-
-            cmd.Parameters.AddWithValue("@nome", nome);
-            NpgsqlDataReader reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-                InfoRegistroNome.Text = reader.GetString(0);
-                InfoRegistroEmail.Text = reader.GetString(1);
-                InfoRegistroContato.Text = reader.GetInt32(2).ToString();
-                InfoRegistroEndereco.Text = reader.GetString(3);
-                InfoRegistroDepartamento.Text = reader.GetString(4);
-                infoCargo.Text = reader.GetString(5);
-                InfoSalario.Text = reader.GetFloat(6).ToString();
-                InfoRegistroContaBanco.Text = reader.GetInt32(7).ToString();
-                InfoRegistroAgenciaBanco.Text = reader.GetString(8);
-            }
-
-            conex.Close();
+            //InfoRegistroNome.Text = con.lerDadosString(nome, con.funcioX, condicao);
+            //InfoRegistroEmail.Text = con.lerDadosString();
+            //InfoRegistroContato.Text = reader.GetInt32(2).ToString();
+            //InfoRegistroEndereco.Text = reader.GetString(3);
+            //InfoRegistroDepartamento.Text = reader.GetString(4);
+            //infoCargo.Text = reader.GetString(5);
+            //InfoSalario.Text = reader.GetFloat(6).ToString();
+            //InfoRegistroContaBanco.Text = reader.GetInt32(7).ToString();
+            //InfoRegistroAgenciaBanco.Text = reader.GetString(8);
         }
 
         private void btnPesquisarColaborador_Click(object sender, EventArgs e)
         {
-            string nome = barraPesquisaConsulta.Text;
-            pesquisarParaConsultar(nome);
+            
+            
         }
 
         private void alterDepartamento_SelectedIndexChanged(object sender, EventArgs e)
@@ -187,70 +170,70 @@ namespace ProjetoPimUnip2023Psemestre
 
         private void alterDepartamento_VisibleChanged(object sender, EventArgs e)
         {
-            NpgsqlConnection conex = new NpgsqlConnection();
-
-            string server = "localhost";
-            string bd = "sistemaholerite";
-            string user = "postgres";
-            string password = "cr7melhor";
-            string port = "5432";
-
-            string conectBDPim = "server=" + server + ";" + "port=" + port + ";" + "user id=" + user + ";" + "password=" + password + ";" + "database=" + bd + ";";
-
-            
-            string comando = "SELECT departamento FROM funcionario;";
-
-            conex.ConnectionString = conectBDPim;
-            conex.Open();
-
-            NpgsqlCommand cmd = new NpgsqlCommand(comando, conex);
-            NpgsqlDataReader reader = cmd.ExecuteReader();
-            DataTable tabela = new DataTable();
-
-            tabela.Load(reader);
-            DataRow row = tabela.NewRow();
-            row["departamento"] = "";
-            tabela.Rows.InsertAt(row, 0);
-
-            alterDepartamento.DataSource = tabela;
-            alterDepartamento.ValueMember = "departamento";
-
-            conex.Close();
+            Classes.ConexaoBd objConect = new Classes.ConexaoBd();
+            string comando = "nome_departamento";
+            string entidade = "departamento";
+            alterDepartamento.DataSource = objConect.mostrarNoComboBOx(comando, entidade);
+            alterDepartamento.ValueMember = comando;
         }
 
         private void barraAlteraFuncio_VisibleChanged(object sender, EventArgs e)
         {
-            NpgsqlConnection conex = new NpgsqlConnection();
 
-            string server = "localhost";
-            string bd = "sistemaholerite";
-            string user = "postgres";
-            string password = "cr7melhor";
-            string port = "5432";
+            Classes.ConexaoBd objConect = new Classes.ConexaoBd();
+            string atributo = "nome";
+            string entidade = "funcionario";
+            barraAlteraFuncio.DataSource = objConect.mostrarNoComboBOx(atributo, entidade);
+            barraAlteraFuncio.ValueMember = atributo;
+        }
 
-            string conectBDPim = "server=" + server + ";" + "port=" + port + ";" + "user id=" + user + ";" + "password=" + password + ";" + "database=" + bd + ";";
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
 
+        }
 
-            string comando = "SELECT nome FROM funcionario;";
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
 
-            conex.ConnectionString = conectBDPim;
-            conex.Open();
+        }
 
-            NpgsqlCommand cmd = new NpgsqlCommand(comando, conex);
-            NpgsqlDataReader reader = cmd.ExecuteReader();
-            DataTable tabela = new DataTable();
+        private void barraPesquisaConsulta_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-            tabela.Load(reader);
-            DataRow row = tabela.NewRow();
-            row["nome"] = "";
-            tabela.Rows.InsertAt(row, 0);
+        }
 
-            barraAlteraFuncio.DataSource = tabela;
-            barraAlteraFuncio.ValueMember = "nome";
-            barraPesquisaConsulta.DataSource = tabela;
-            barraPesquisaConsulta.ValueMember = "nome";
+        private void barraPesquisaConsulta_VisibleChanged(object sender, EventArgs e)
+        {
+            Classes.ConexaoBd objConect = new Classes.ConexaoBd();
+            string comando = "nome";
+            string entidade = "funcionario";
+            barraPesquisaConsulta.DataSource = objConect.mostrarNoComboBOx(comando, entidade);
+            barraPesquisaConsulta.ValueMember = comando;
+        }
 
-            conex.Close();
+        private void alterCargo_VisibleChanged(object sender, EventArgs e)
+        {
+            Classes.ConexaoBd objConect = new Classes.ConexaoBd();
+            string atributo = "nome_cargo";
+            string entidade = "cargo";
+            alterCargo.DataSource = objConect.mostrarNoComboBOx(atributo, entidade);
+            alterCargo.ValueMember = atributo;
+        }
+
+        private void alterCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPesquisarColaborador_Click_1(object sender, EventArgs e)
+        {
+            Classes.ConexaoBd conexaoBd = new Classes.ConexaoBd();
+
         }
     }
 }

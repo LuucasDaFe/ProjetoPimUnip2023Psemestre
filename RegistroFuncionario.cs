@@ -16,5 +16,10 @@ namespace ProjetoPimUnip2023Psemestre
         {
             InitializeComponent();
         }
+
+        private void RegistroFuncionario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

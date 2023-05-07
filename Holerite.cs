@@ -32,7 +32,7 @@ namespace ProjetoPimUnip2023Psemestre
         private void dgvListaFuncio_VisibleChanged(object sender, EventArgs e)
         {
             //
-            string comandoSql = "SELECT id, nome, cargo, departamento FROM funcionario;";
+            string comandoSql = "SELECT idfuncionario, nome FROM funcionario;";
             Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
             dgvHoleriteFuncionario.DataSource = objetoConexao.incluirInfoDgvColaboradores(comandoSql);
         }
@@ -59,10 +59,10 @@ namespace ProjetoPimUnip2023Psemestre
                 switch (coluna.Name)
                 {
                     case "HoleriteDoMes":
-                        coluna.DisplayIndex = 4;
+                        coluna.DisplayIndex = 2;
                         break;
                     case "pastaHolerite":
-                        coluna.DisplayIndex = 5;
+                        coluna.DisplayIndex = 3;
                         break;
                 }
             }

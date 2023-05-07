@@ -30,56 +30,76 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnFecharPainelFuncionario = new System.Windows.Forms.Label();
-            this.infoEstado = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.InfoRegistroEmail = new System.Windows.Forms.TextBox();
+            this.txt_addEmail = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.InfoRegistroContato = new System.Windows.Forms.TextBox();
+            this.txt_addContato = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.InfoRegistroNomePai = new System.Windows.Forms.TextBox();
+            this.txt_addPai = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.InforegistroNomeMae = new System.Windows.Forms.TextBox();
+            this.txt_addMae = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.infoCpf = new System.Windows.Forms.TextBox();
+            this.txt_addCpf = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.InfoRegistroRG = new System.Windows.Forms.TextBox();
+            this.txt_addRg = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.infoRegistroDataNasc = new System.Windows.Forms.TextBox();
+            this.txt_addDataNascimento = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.InfoRegistroCidade = new System.Windows.Forms.TextBox();
+            this.txt_addCidade = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.InfoRegistroEndereco = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.InfoRegistroNome = new System.Windows.Forms.TextBox();
+            this.txt_addCep = new System.Windows.Forms.TextBox();
+            this.txt_addNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.imgregistroFuncionario = new System.Windows.Forms.PictureBox();
-            this.InfoNumeroRegistro = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.InfoRegistroTituloEleitor = new System.Windows.Forms.TextBox();
+            this.txt_addConjuge = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.InfoRegistroCNH = new System.Windows.Forms.TextBox();
+            this.txt_addT_zona = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.InfoRegistroDepartamento = new System.Windows.Forms.TextBox();
+            this.txt_addDepartamento = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.InfoRegistroDataAdimssao = new System.Windows.Forms.TextBox();
+            this.txt_addData_admissao = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.InfoRegistroSexo = new System.Windows.Forms.TextBox();
+            this.txt_addSexo = new System.Windows.Forms.TextBox();
             this.infoSexo = new System.Windows.Forms.Label();
-            this.InfoRegistroNacionalidade = new System.Windows.Forms.TextBox();
+            this.txt_addNacionalidade = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.InfoRegistroContaBanco = new System.Windows.Forms.TextBox();
+            this.txt_addConta_banco = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.InfoSalario = new System.Windows.Forms.TextBox();
+            this.txt_addSalario = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.InfoRegistroAgenciaBanco = new System.Windows.Forms.TextBox();
+            this.txt_addAgencia_banco = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.InfoRegistroEstadoCivil = new System.Windows.Forms.TextBox();
+            this.txt_addEstadoCivil = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.infoCargo = new System.Windows.Forms.TextBox();
+            this.txt_addCargo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txt_addRua = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_addBairro = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txt_add_N_rua = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txt_addEstado = new System.Windows.Forms.ComboBox();
+            this.txt_addT_eleitor = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_addT_secao = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txt_addCert_militar = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txt_addCnh = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txt_addCtps = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txt_addPis = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txt_addCtps_serie = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txt_addEscolaridade = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgregistroFuncionario)).BeginInit();
             this.SuspendLayout();
@@ -87,29 +107,31 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txt_addEstado);
+            this.panel1.Controls.Add(this.txt_add_N_rua);
+            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.txt_addBairro);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.txt_addRua);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.btnFecharPainelFuncionario);
-            this.panel1.Controls.Add(this.infoEstado);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.InfoRegistroEmail);
+            this.panel1.Controls.Add(this.txt_addEmail);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.InfoRegistroContato);
+            this.panel1.Controls.Add(this.txt_addContato);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.InfoRegistroNomePai);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.InforegistroNomeMae);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.infoCpf);
+            this.panel1.Controls.Add(this.txt_addCpf);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.InfoRegistroRG);
+            this.panel1.Controls.Add(this.txt_addRg);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.infoRegistroDataNasc);
+            this.panel1.Controls.Add(this.txt_addDataNascimento);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.InfoRegistroCidade);
+            this.panel1.Controls.Add(this.txt_addCidade);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.InfoRegistroEndereco);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.InfoRegistroNome);
+            this.panel1.Controls.Add(this.txt_addCep);
+            this.panel1.Controls.Add(this.txt_addNome);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.imgregistroFuncionario);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -130,19 +152,11 @@
             this.btnFecharPainelFuncionario.Text = "X";
             this.btnFecharPainelFuncionario.Click += new System.EventHandler(this.btnFecharPainelFuncionario_Click);
             // 
-            // infoEstado
-            // 
-            this.infoEstado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoEstado.Location = new System.Drawing.Point(919, 84);
-            this.infoEstado.Name = "infoEstado";
-            this.infoEstado.Size = new System.Drawing.Size(195, 26);
-            this.infoEstado.TabIndex = 32;
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(751, 90);
+            this.label19.Location = new System.Drawing.Point(751, 184);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(62, 20);
             this.label19.TabIndex = 31;
@@ -155,176 +169,167 @@
             this.panel2.Size = new System.Drawing.Size(1121, 484);
             this.panel2.TabIndex = 1;
             // 
-            // InfoRegistroEmail
+            // txt_addEmail
             // 
-            this.InfoRegistroEmail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroEmail.Location = new System.Drawing.Point(919, 116);
-            this.InfoRegistroEmail.Name = "InfoRegistroEmail";
-            this.InfoRegistroEmail.Size = new System.Drawing.Size(350, 26);
-            this.InfoRegistroEmail.TabIndex = 30;
+            this.txt_addEmail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addEmail.Location = new System.Drawing.Point(323, 149);
+            this.txt_addEmail.Name = "txt_addEmail";
+            this.txt_addEmail.Size = new System.Drawing.Size(350, 26);
+            this.txt_addEmail.TabIndex = 30;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(751, 122);
+            this.label12.Location = new System.Drawing.Point(222, 157);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 20);
             this.label12.TabIndex = 29;
             this.label12.Text = "E-mail:";
             // 
-            // InfoRegistroContato
+            // txt_addContato
             // 
-            this.InfoRegistroContato.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroContato.Location = new System.Drawing.Point(919, 149);
-            this.InfoRegistroContato.Name = "InfoRegistroContato";
-            this.InfoRegistroContato.Size = new System.Drawing.Size(219, 26);
-            this.InfoRegistroContato.TabIndex = 28;
+            this.txt_addContato.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addContato.Location = new System.Drawing.Point(323, 181);
+            this.txt_addContato.Name = "txt_addContato";
+            this.txt_addContato.Size = new System.Drawing.Size(219, 26);
+            this.txt_addContato.TabIndex = 28;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(751, 155);
+            this.label11.Location = new System.Drawing.Point(222, 187);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(74, 20);
             this.label11.TabIndex = 27;
             this.label11.Text = "Contato:";
             // 
-            // InfoRegistroNomePai
+            // txt_addPai
             // 
-            this.InfoRegistroNomePai.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroNomePai.Location = new System.Drawing.Point(321, 180);
-            this.InfoRegistroNomePai.Name = "InfoRegistroNomePai";
-            this.InfoRegistroNomePai.Size = new System.Drawing.Size(346, 26);
-            this.InfoRegistroNomePai.TabIndex = 24;
+            this.txt_addPai.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addPai.Location = new System.Drawing.Point(944, 433);
+            this.txt_addPai.Name = "txt_addPai";
+            this.txt_addPai.Size = new System.Drawing.Size(330, 26);
+            this.txt_addPai.TabIndex = 24;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(220, 186);
+            this.label9.Location = new System.Drawing.Point(816, 436);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 20);
             this.label9.TabIndex = 23;
             this.label9.Text = "Nome pai:";
             // 
-            // InforegistroNomeMae
+            // txt_addMae
             // 
-            this.InforegistroNomeMae.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InforegistroNomeMae.Location = new System.Drawing.Point(321, 147);
-            this.InforegistroNomeMae.Name = "InforegistroNomeMae";
-            this.InforegistroNomeMae.Size = new System.Drawing.Size(346, 26);
-            this.InforegistroNomeMae.TabIndex = 22;
+            this.txt_addMae.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addMae.Location = new System.Drawing.Point(944, 401);
+            this.txt_addMae.Name = "txt_addMae";
+            this.txt_addMae.Size = new System.Drawing.Size(330, 26);
+            this.txt_addMae.TabIndex = 22;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(220, 153);
+            this.label8.Location = new System.Drawing.Point(816, 404);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 20);
             this.label8.TabIndex = 21;
             this.label8.Text = "Nome mãe:";
             // 
-            // infoCpf
+            // txt_addCpf
             // 
-            this.infoCpf.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoCpf.Location = new System.Drawing.Point(321, 116);
-            this.infoCpf.Name = "infoCpf";
-            this.infoCpf.Size = new System.Drawing.Size(232, 26);
-            this.infoCpf.TabIndex = 20;
+            this.txt_addCpf.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCpf.Location = new System.Drawing.Point(323, 81);
+            this.txt_addCpf.Name = "txt_addCpf";
+            this.txt_addCpf.Size = new System.Drawing.Size(232, 26);
+            this.txt_addCpf.TabIndex = 20;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(220, 122);
+            this.label7.Location = new System.Drawing.Point(222, 87);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 20);
             this.label7.TabIndex = 19;
             this.label7.Text = "CPF:";
             // 
-            // InfoRegistroRG
+            // txt_addRg
             // 
-            this.InfoRegistroRG.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroRG.Location = new System.Drawing.Point(321, 84);
-            this.InfoRegistroRG.Name = "InfoRegistroRG";
-            this.InfoRegistroRG.Size = new System.Drawing.Size(184, 26);
-            this.InfoRegistroRG.TabIndex = 18;
+            this.txt_addRg.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addRg.Location = new System.Drawing.Point(323, 49);
+            this.txt_addRg.Name = "txt_addRg";
+            this.txt_addRg.Size = new System.Drawing.Size(184, 26);
+            this.txt_addRg.TabIndex = 18;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(220, 90);
+            this.label6.Location = new System.Drawing.Point(222, 55);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 20);
             this.label6.TabIndex = 17;
             this.label6.Text = "RG:";
             // 
-            // infoRegistroDataNasc
+            // txt_addDataNascimento
             // 
-            this.infoRegistroDataNasc.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoRegistroDataNasc.Location = new System.Drawing.Point(919, 17);
-            this.infoRegistroDataNasc.Name = "infoRegistroDataNasc";
-            this.infoRegistroDataNasc.Size = new System.Drawing.Size(158, 26);
-            this.infoRegistroDataNasc.TabIndex = 16;
+            this.txt_addDataNascimento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addDataNascimento.Location = new System.Drawing.Point(397, 116);
+            this.txt_addDataNascimento.Name = "txt_addDataNascimento";
+            this.txt_addDataNascimento.Size = new System.Drawing.Size(158, 26);
+            this.txt_addDataNascimento.TabIndex = 16;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(751, 23);
+            this.label5.Location = new System.Drawing.Point(222, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(162, 20);
             this.label5.TabIndex = 15;
             this.label5.Text = "Data de nascimento:";
             // 
-            // InfoRegistroCidade
+            // txt_addCidade
             // 
-            this.InfoRegistroCidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroCidade.Location = new System.Drawing.Point(919, 49);
-            this.InfoRegistroCidade.Name = "InfoRegistroCidade";
-            this.InfoRegistroCidade.Size = new System.Drawing.Size(155, 26);
-            this.InfoRegistroCidade.TabIndex = 10;
+            this.txt_addCidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCidade.Location = new System.Drawing.Point(825, 149);
+            this.txt_addCidade.Name = "txt_addCidade";
+            this.txt_addCidade.Size = new System.Drawing.Size(155, 26);
+            this.txt_addCidade.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(751, 58);
+            this.label3.Location = new System.Drawing.Point(751, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 9;
             this.label3.Text = "Cidade:";
             // 
-            // InfoRegistroEndereco
+            // txt_addCep
             // 
-            this.InfoRegistroEndereco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroEndereco.Location = new System.Drawing.Point(321, 52);
-            this.InfoRegistroEndereco.Name = "InfoRegistroEndereco";
-            this.InfoRegistroEndereco.Size = new System.Drawing.Size(405, 26);
-            this.InfoRegistroEndereco.TabIndex = 7;
+            this.txt_addCep.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCep.Location = new System.Drawing.Point(825, 17);
+            this.txt_addCep.Name = "txt_addCep";
+            this.txt_addCep.Size = new System.Drawing.Size(155, 26);
+            this.txt_addCep.TabIndex = 7;
+            this.txt_addCep.TextChanged += new System.EventHandler(this.InfoRegistroEndereco_TextChanged);
             // 
-            // label2
+            // txt_addNome
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(220, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Endereço:";
-            // 
-            // InfoRegistroNome
-            // 
-            this.InfoRegistroNome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroNome.Location = new System.Drawing.Point(321, 17);
-            this.InfoRegistroNome.Name = "InfoRegistroNome";
-            this.InfoRegistroNome.Size = new System.Drawing.Size(405, 26);
-            this.InfoRegistroNome.TabIndex = 5;
-            this.InfoRegistroNome.TextChanged += new System.EventHandler(this.InfoRegistroNome_TextChanged);
+            this.txt_addNome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addNome.Location = new System.Drawing.Point(321, 17);
+            this.txt_addNome.Name = "txt_addNome";
+            this.txt_addNome.Size = new System.Drawing.Size(405, 26);
+            this.txt_addNome.TabIndex = 5;
+            this.txt_addNome.TextChanged += new System.EventHandler(this.InfoRegistroNome_TextChanged);
             // 
             // label1
             // 
@@ -347,67 +352,50 @@
             this.imgregistroFuncionario.TabIndex = 3;
             this.imgregistroFuncionario.TabStop = false;
             // 
-            // InfoNumeroRegistro
+            // txt_addConjuge
             // 
-            this.InfoNumeroRegistro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoNumeroRegistro.Location = new System.Drawing.Point(565, 232);
-            this.InfoNumeroRegistro.Name = "InfoNumeroRegistro";
-            this.InfoNumeroRegistro.Size = new System.Drawing.Size(239, 26);
-            this.InfoNumeroRegistro.TabIndex = 9;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(440, 238);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(92, 20);
-            this.label14.TabIndex = 8;
-            this.label14.Text = "N° Registro:";
-            // 
-            // InfoRegistroTituloEleitor
-            // 
-            this.InfoRegistroTituloEleitor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroTituloEleitor.Location = new System.Drawing.Point(971, 331);
-            this.InfoRegistroTituloEleitor.Name = "InfoRegistroTituloEleitor";
-            this.InfoRegistroTituloEleitor.Size = new System.Drawing.Size(192, 26);
-            this.InfoRegistroTituloEleitor.TabIndex = 15;
+            this.txt_addConjuge.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addConjuge.Location = new System.Drawing.Point(944, 366);
+            this.txt_addConjuge.Name = "txt_addConjuge";
+            this.txt_addConjuge.Size = new System.Drawing.Size(192, 26);
+            this.txt_addConjuge.TabIndex = 15;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(843, 337);
+            this.label15.Location = new System.Drawing.Point(816, 369);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(120, 20);
+            this.label15.Size = new System.Drawing.Size(76, 20);
             this.label15.TabIndex = 14;
-            this.label15.Text = "Titulo de Eleitor:";
+            this.label15.Text = "Conjuge:";
             // 
-            // InfoRegistroCNH
+            // txt_addT_zona
             // 
-            this.InfoRegistroCNH.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroCNH.Location = new System.Drawing.Point(565, 331);
-            this.InfoRegistroCNH.Name = "InfoRegistroCNH";
-            this.InfoRegistroCNH.Size = new System.Drawing.Size(224, 26);
-            this.InfoRegistroCNH.TabIndex = 13;
+            this.txt_addT_zona.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addT_zona.Location = new System.Drawing.Point(568, 264);
+            this.txt_addT_zona.Name = "txt_addT_zona";
+            this.txt_addT_zona.Size = new System.Drawing.Size(224, 26);
+            this.txt_addT_zona.TabIndex = 13;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(440, 337);
+            this.label16.Location = new System.Drawing.Point(440, 302);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 20);
+            this.label16.Size = new System.Drawing.Size(123, 20);
             this.label16.TabIndex = 12;
-            this.label16.Text = "N° CNH:";
+            this.label16.Text = "Titulo de Seção:";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
-            // InfoRegistroDepartamento
+            // txt_addDepartamento
             // 
-            this.InfoRegistroDepartamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroDepartamento.Location = new System.Drawing.Point(171, 296);
-            this.InfoRegistroDepartamento.Name = "InfoRegistroDepartamento";
-            this.InfoRegistroDepartamento.Size = new System.Drawing.Size(221, 26);
-            this.InfoRegistroDepartamento.TabIndex = 19;
+            this.txt_addDepartamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addDepartamento.Location = new System.Drawing.Point(171, 296);
+            this.txt_addDepartamento.Name = "txt_addDepartamento";
+            this.txt_addDepartamento.Size = new System.Drawing.Size(221, 26);
+            this.txt_addDepartamento.TabIndex = 19;
             // 
             // label17
             // 
@@ -419,13 +407,13 @@
             this.label17.TabIndex = 18;
             this.label17.Text = "Departamento:";
             // 
-            // InfoRegistroDataAdimssao
+            // txt_addData_admissao
             // 
-            this.InfoRegistroDataAdimssao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroDataAdimssao.Location = new System.Drawing.Point(171, 232);
-            this.InfoRegistroDataAdimssao.Name = "InfoRegistroDataAdimssao";
-            this.InfoRegistroDataAdimssao.Size = new System.Drawing.Size(133, 26);
-            this.InfoRegistroDataAdimssao.TabIndex = 17;
+            this.txt_addData_admissao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addData_admissao.Location = new System.Drawing.Point(171, 232);
+            this.txt_addData_admissao.Name = "txt_addData_admissao";
+            this.txt_addData_admissao.Size = new System.Drawing.Size(133, 26);
+            this.txt_addData_admissao.TabIndex = 17;
             // 
             // label18
             // 
@@ -437,68 +425,68 @@
             this.label18.TabIndex = 16;
             this.label18.Text = "Data de admissão:";
             // 
-            // InfoRegistroSexo
+            // txt_addSexo
             // 
-            this.InfoRegistroSexo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroSexo.Location = new System.Drawing.Point(971, 264);
-            this.InfoRegistroSexo.Name = "InfoRegistroSexo";
-            this.InfoRegistroSexo.Size = new System.Drawing.Size(192, 26);
-            this.InfoRegistroSexo.TabIndex = 23;
+            this.txt_addSexo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addSexo.Location = new System.Drawing.Point(944, 299);
+            this.txt_addSexo.Name = "txt_addSexo";
+            this.txt_addSexo.Size = new System.Drawing.Size(192, 26);
+            this.txt_addSexo.TabIndex = 23;
             // 
             // infoSexo
             // 
             this.infoSexo.AutoSize = true;
             this.infoSexo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoSexo.Location = new System.Drawing.Point(843, 270);
+            this.infoSexo.Location = new System.Drawing.Point(816, 305);
             this.infoSexo.Name = "infoSexo";
             this.infoSexo.Size = new System.Drawing.Size(47, 20);
             this.infoSexo.TabIndex = 22;
             this.infoSexo.Text = "Sexo:";
             // 
-            // InfoRegistroNacionalidade
+            // txt_addNacionalidade
             // 
-            this.InfoRegistroNacionalidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroNacionalidade.Location = new System.Drawing.Point(971, 232);
-            this.InfoRegistroNacionalidade.Name = "InfoRegistroNacionalidade";
-            this.InfoRegistroNacionalidade.Size = new System.Drawing.Size(192, 26);
-            this.InfoRegistroNacionalidade.TabIndex = 21;
+            this.txt_addNacionalidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addNacionalidade.Location = new System.Drawing.Point(944, 264);
+            this.txt_addNacionalidade.Name = "txt_addNacionalidade";
+            this.txt_addNacionalidade.Size = new System.Drawing.Size(192, 26);
+            this.txt_addNacionalidade.TabIndex = 21;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(843, 235);
+            this.label20.Location = new System.Drawing.Point(816, 270);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(122, 20);
             this.label20.TabIndex = 20;
             this.label20.Text = "Nacionalidade:";
             // 
-            // InfoRegistroContaBanco
+            // txt_addConta_banco
             // 
-            this.InfoRegistroContaBanco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroContaBanco.Location = new System.Drawing.Point(565, 267);
-            this.InfoRegistroContaBanco.Name = "InfoRegistroContaBanco";
-            this.InfoRegistroContaBanco.Size = new System.Drawing.Size(160, 26);
-            this.InfoRegistroContaBanco.TabIndex = 27;
+            this.txt_addConta_banco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addConta_banco.Location = new System.Drawing.Point(171, 363);
+            this.txt_addConta_banco.Name = "txt_addConta_banco";
+            this.txt_addConta_banco.Size = new System.Drawing.Size(160, 26);
+            this.txt_addConta_banco.TabIndex = 27;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(440, 273);
+            this.label21.Location = new System.Drawing.Point(23, 369);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(112, 20);
+            this.label21.Size = new System.Drawing.Size(136, 20);
             this.label21.TabIndex = 26;
-            this.label21.Text = "Conta banco:";
+            this.label21.Text = "Conta do banco:";
             // 
-            // InfoSalario
+            // txt_addSalario
             // 
-            this.InfoSalario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoSalario.Location = new System.Drawing.Point(171, 264);
-            this.InfoSalario.Name = "InfoSalario";
-            this.InfoSalario.Size = new System.Drawing.Size(133, 26);
-            this.InfoSalario.TabIndex = 25;
-            this.InfoSalario.TextChanged += new System.EventHandler(this.InfoSalario_TextChanged);
+            this.txt_addSalario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addSalario.Location = new System.Drawing.Point(171, 264);
+            this.txt_addSalario.Name = "txt_addSalario";
+            this.txt_addSalario.Size = new System.Drawing.Size(133, 26);
+            this.txt_addSalario.TabIndex = 25;
+            this.txt_addSalario.TextChanged += new System.EventHandler(this.InfoSalario_TextChanged);
             // 
             // label22
             // 
@@ -510,19 +498,19 @@
             this.label22.TabIndex = 24;
             this.label22.Text = "Sálario:";
             // 
-            // InfoRegistroAgenciaBanco
+            // txt_addAgencia_banco
             // 
-            this.InfoRegistroAgenciaBanco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroAgenciaBanco.Location = new System.Drawing.Point(565, 299);
-            this.InfoRegistroAgenciaBanco.Name = "InfoRegistroAgenciaBanco";
-            this.InfoRegistroAgenciaBanco.Size = new System.Drawing.Size(160, 26);
-            this.InfoRegistroAgenciaBanco.TabIndex = 29;
+            this.txt_addAgencia_banco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addAgencia_banco.Location = new System.Drawing.Point(171, 398);
+            this.txt_addAgencia_banco.Name = "txt_addAgencia_banco";
+            this.txt_addAgencia_banco.Size = new System.Drawing.Size(160, 26);
+            this.txt_addAgencia_banco.TabIndex = 29;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(440, 302);
+            this.label23.Location = new System.Drawing.Point(23, 401);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(76, 20);
             this.label23.TabIndex = 28;
@@ -533,7 +521,7 @@
             this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(297, 387);
+            this.button1.Location = new System.Drawing.Point(295, 482);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(256, 34);
             this.button1.TabIndex = 30;
@@ -546,7 +534,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Red;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(707, 387);
+            this.btnCancelar.Location = new System.Drawing.Point(709, 482);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(256, 34);
             this.btnCancelar.TabIndex = 31;
@@ -554,31 +542,31 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // InfoRegistroEstadoCivil
+            // txt_addEstadoCivil
             // 
-            this.InfoRegistroEstadoCivil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoRegistroEstadoCivil.Location = new System.Drawing.Point(971, 296);
-            this.InfoRegistroEstadoCivil.Name = "InfoRegistroEstadoCivil";
-            this.InfoRegistroEstadoCivil.Size = new System.Drawing.Size(192, 26);
-            this.InfoRegistroEstadoCivil.TabIndex = 35;
+            this.txt_addEstadoCivil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addEstadoCivil.Location = new System.Drawing.Point(944, 331);
+            this.txt_addEstadoCivil.Name = "txt_addEstadoCivil";
+            this.txt_addEstadoCivil.Size = new System.Drawing.Size(192, 26);
+            this.txt_addEstadoCivil.TabIndex = 35;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(843, 302);
+            this.label10.Location = new System.Drawing.Point(816, 337);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(95, 20);
             this.label10.TabIndex = 34;
             this.label10.Text = "Estado civil:";
             // 
-            // infoCargo
+            // txt_addCargo
             // 
-            this.infoCargo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoCargo.Location = new System.Drawing.Point(171, 331);
-            this.infoCargo.Name = "infoCargo";
-            this.infoCargo.Size = new System.Drawing.Size(221, 26);
-            this.infoCargo.TabIndex = 33;
+            this.txt_addCargo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCargo.Location = new System.Drawing.Point(171, 331);
+            this.txt_addCargo.Name = "txt_addCargo";
+            this.txt_addCargo.Size = new System.Drawing.Size(221, 26);
+            this.txt_addCargo.TabIndex = 33;
             // 
             // label4
             // 
@@ -590,38 +578,272 @@
             this.label4.TabIndex = 32;
             this.label4.Text = "Cargo:";
             // 
+            // txt_addRua
+            // 
+            this.txt_addRua.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addRua.Location = new System.Drawing.Point(825, 49);
+            this.txt_addRua.Name = "txt_addRua";
+            this.txt_addRua.Size = new System.Drawing.Size(355, 26);
+            this.txt_addRua.TabIndex = 35;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(751, 55);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 20);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "Rua:";
+            // 
+            // txt_addBairro
+            // 
+            this.txt_addBairro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addBairro.Location = new System.Drawing.Point(825, 116);
+            this.txt_addBairro.Name = "txt_addBairro";
+            this.txt_addBairro.Size = new System.Drawing.Size(155, 26);
+            this.txt_addBairro.TabIndex = 37;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(751, 119);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(55, 20);
+            this.label24.TabIndex = 36;
+            this.label24.Text = "Bairro:";
+            // 
+            // txt_add_N_rua
+            // 
+            this.txt_add_N_rua.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_add_N_rua.Location = new System.Drawing.Point(825, 81);
+            this.txt_add_N_rua.Name = "txt_add_N_rua";
+            this.txt_add_N_rua.Size = new System.Drawing.Size(155, 26);
+            this.txt_add_N_rua.TabIndex = 39;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(751, 87);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(30, 20);
+            this.label25.TabIndex = 38;
+            this.label25.Text = "N°:";
+            // 
+            // txt_addEstado
+            // 
+            this.txt_addEstado.FormattingEnabled = true;
+            this.txt_addEstado.Location = new System.Drawing.Point(825, 184);
+            this.txt_addEstado.Name = "txt_addEstado";
+            this.txt_addEstado.Size = new System.Drawing.Size(61, 21);
+            this.txt_addEstado.TabIndex = 40;
+            // 
+            // txt_addT_eleitor
+            // 
+            this.txt_addT_eleitor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addT_eleitor.Location = new System.Drawing.Point(568, 232);
+            this.txt_addT_eleitor.Name = "txt_addT_eleitor";
+            this.txt_addT_eleitor.Size = new System.Drawing.Size(224, 26);
+            this.txt_addT_eleitor.TabIndex = 37;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(440, 238);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(122, 20);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "Titulo de eleitor:";
+            // 
+            // txt_addT_secao
+            // 
+            this.txt_addT_secao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addT_secao.Location = new System.Drawing.Point(568, 296);
+            this.txt_addT_secao.Name = "txt_addT_secao";
+            this.txt_addT_secao.Size = new System.Drawing.Size(224, 26);
+            this.txt_addT_secao.TabIndex = 39;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(440, 270);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(111, 20);
+            this.label26.TabIndex = 38;
+            this.label26.Text = "Titulo de zona:";
+            // 
+            // txt_addCert_militar
+            // 
+            this.txt_addCert_militar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCert_militar.Location = new System.Drawing.Point(568, 331);
+            this.txt_addCert_militar.Name = "txt_addCert_militar";
+            this.txt_addCert_militar.Size = new System.Drawing.Size(224, 26);
+            this.txt_addCert_militar.TabIndex = 41;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(440, 337);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(95, 20);
+            this.label27.TabIndex = 40;
+            this.label27.Text = "Cert. militar:";
+            // 
+            // txt_addCnh
+            // 
+            this.txt_addCnh.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCnh.Location = new System.Drawing.Point(568, 363);
+            this.txt_addCnh.Name = "txt_addCnh";
+            this.txt_addCnh.Size = new System.Drawing.Size(224, 26);
+            this.txt_addCnh.TabIndex = 43;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(440, 369);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(67, 20);
+            this.label28.TabIndex = 42;
+            this.label28.Text = "N° CNH:";
+            // 
+            // txt_addCtps
+            // 
+            this.txt_addCtps.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCtps.Location = new System.Drawing.Point(568, 398);
+            this.txt_addCtps.Name = "txt_addCtps";
+            this.txt_addCtps.Size = new System.Drawing.Size(224, 26);
+            this.txt_addCtps.TabIndex = 45;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(440, 404);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(46, 20);
+            this.label29.TabIndex = 44;
+            this.label29.Text = "CTPS:";
+            // 
+            // txt_addPis
+            // 
+            this.txt_addPis.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addPis.Location = new System.Drawing.Point(171, 430);
+            this.txt_addPis.Name = "txt_addPis";
+            this.txt_addPis.Size = new System.Drawing.Size(224, 26);
+            this.txt_addPis.TabIndex = 47;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(23, 436);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(34, 20);
+            this.label30.TabIndex = 46;
+            this.label30.Text = "PIS:";
+            // 
+            // txt_addCtps_serie
+            // 
+            this.txt_addCtps_serie.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCtps_serie.Location = new System.Drawing.Point(568, 430);
+            this.txt_addCtps_serie.Name = "txt_addCtps_serie";
+            this.txt_addCtps_serie.Size = new System.Drawing.Size(224, 26);
+            this.txt_addCtps_serie.TabIndex = 49;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(440, 436);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(87, 20);
+            this.label31.TabIndex = 48;
+            this.label31.Text = "CTPS SERIE:";
+            // 
+            // txt_addEscolaridade
+            // 
+            this.txt_addEscolaridade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addEscolaridade.Location = new System.Drawing.Point(944, 232);
+            this.txt_addEscolaridade.Name = "txt_addEscolaridade";
+            this.txt_addEscolaridade.Size = new System.Drawing.Size(192, 26);
+            this.txt_addEscolaridade.TabIndex = 51;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(816, 241);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(108, 20);
+            this.label32.TabIndex = 50;
+            this.label32.Text = "Escolaridade:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(751, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 20);
+            this.label2.TabIndex = 87;
+            this.label2.Text = "CEP:";
+            // 
             // InformacoesResgitro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1281, 441);
-            this.Controls.Add(this.InfoRegistroEstadoCivil);
+            this.ClientSize = new System.Drawing.Size(1281, 528);
+            this.Controls.Add(this.txt_addEscolaridade);
+            this.Controls.Add(this.label32);
+            this.Controls.Add(this.txt_addCtps_serie);
+            this.Controls.Add(this.label31);
+            this.Controls.Add(this.txt_addPis);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.txt_addCtps);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.txt_addCnh);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.txt_addCert_militar);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.txt_addT_secao);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.txt_addT_eleitor);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txt_addEstadoCivil);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.infoCargo);
+            this.Controls.Add(this.txt_addCargo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.InfoRegistroAgenciaBanco);
+            this.Controls.Add(this.txt_addAgencia_banco);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.InfoRegistroContaBanco);
+            this.Controls.Add(this.txt_addPai);
+            this.Controls.Add(this.txt_addConta_banco);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.InfoSalario);
+            this.Controls.Add(this.txt_addMae);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txt_addSalario);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.InfoRegistroSexo);
+            this.Controls.Add(this.txt_addSexo);
             this.Controls.Add(this.infoSexo);
-            this.Controls.Add(this.InfoRegistroNacionalidade);
+            this.Controls.Add(this.txt_addNacionalidade);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.InfoRegistroDepartamento);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.InfoRegistroDataAdimssao);
+            this.Controls.Add(this.txt_addDepartamento);
+            this.Controls.Add(this.txt_addData_admissao);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.InfoRegistroTituloEleitor);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.txt_addConjuge);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.InfoRegistroCNH);
+            this.Controls.Add(this.txt_addT_zona);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.InfoNumeroRegistro);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InformacoesResgitro";
@@ -638,56 +860,76 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox InfoRegistroCidade;
+        private System.Windows.Forms.TextBox txt_addCidade;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox InfoRegistroEndereco;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox InfoRegistroNome;
+        private System.Windows.Forms.TextBox txt_addCep;
+        private System.Windows.Forms.TextBox txt_addNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox imgregistroFuncionario;
-        private System.Windows.Forms.TextBox InfoRegistroEmail;
+        private System.Windows.Forms.TextBox txt_addEmail;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox InfoRegistroContato;
+        private System.Windows.Forms.TextBox txt_addContato;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox InfoRegistroNomePai;
+        private System.Windows.Forms.TextBox txt_addPai;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox InforegistroNomeMae;
+        private System.Windows.Forms.TextBox txt_addMae;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox infoCpf;
+        private System.Windows.Forms.TextBox txt_addCpf;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox InfoRegistroRG;
+        private System.Windows.Forms.TextBox txt_addRg;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox infoRegistroDataNasc;
+        private System.Windows.Forms.TextBox txt_addDataNascimento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox InfoNumeroRegistro;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox InfoRegistroTituloEleitor;
+        private System.Windows.Forms.TextBox txt_addConjuge;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox InfoRegistroCNH;
+        private System.Windows.Forms.TextBox txt_addT_zona;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox InfoRegistroDepartamento;
+        private System.Windows.Forms.TextBox txt_addDepartamento;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox InfoRegistroDataAdimssao;
+        private System.Windows.Forms.TextBox txt_addData_admissao;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox InfoRegistroSexo;
+        private System.Windows.Forms.TextBox txt_addSexo;
         private System.Windows.Forms.Label infoSexo;
-        private System.Windows.Forms.TextBox InfoRegistroNacionalidade;
+        private System.Windows.Forms.TextBox txt_addNacionalidade;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox InfoRegistroContaBanco;
+        private System.Windows.Forms.TextBox txt_addConta_banco;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox InfoSalario;
+        private System.Windows.Forms.TextBox txt_addSalario;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox InfoRegistroAgenciaBanco;
+        private System.Windows.Forms.TextBox txt_addAgencia_banco;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox infoEstado;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label btnFecharPainelFuncionario;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox InfoRegistroEstadoCivil;
+        private System.Windows.Forms.TextBox txt_addEstadoCivil;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox infoCargo;
+        private System.Windows.Forms.TextBox txt_addCargo;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox txt_addEstado;
+        private System.Windows.Forms.TextBox txt_add_N_rua;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox txt_addBairro;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txt_addRua;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txt_addT_eleitor;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txt_addT_secao;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox txt_addCert_militar;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txt_addCnh;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txt_addCtps;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txt_addPis;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox txt_addCtps_serie;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txt_addEscolaridade;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label2;
     }
 }

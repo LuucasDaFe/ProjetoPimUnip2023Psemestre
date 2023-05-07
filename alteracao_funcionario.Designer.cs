@@ -151,6 +151,7 @@
             this.tabPage1.Size = new System.Drawing.Size(792, 391);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Consultar";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click_1);
             // 
             // barraPesquisaConsulta
             // 
@@ -159,6 +160,8 @@
             this.barraPesquisaConsulta.Name = "barraPesquisaConsulta";
             this.barraPesquisaConsulta.Size = new System.Drawing.Size(335, 28);
             this.barraPesquisaConsulta.TabIndex = 56;
+            this.barraPesquisaConsulta.SelectedIndexChanged += new System.EventHandler(this.barraPesquisaConsulta_SelectedIndexChanged);
+            this.barraPesquisaConsulta.VisibleChanged += new System.EventHandler(this.barraPesquisaConsulta_VisibleChanged);
             // 
             // panel2
             // 
@@ -362,7 +365,7 @@
             this.btnPesquisarColaborador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnPesquisarColaborador.TabIndex = 3;
             this.btnPesquisarColaborador.TabStop = false;
-            this.btnPesquisarColaborador.Click += new System.EventHandler(this.btnPesquisarColaborador_Click);
+            this.btnPesquisarColaborador.Click += new System.EventHandler(this.btnPesquisarColaborador_Click_1);
             // 
             // tabPage2
             // 
@@ -386,6 +389,7 @@
             this.tabPage2.Size = new System.Drawing.Size(792, 391);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Alterar informações";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // panelPesquisa
             // 
@@ -571,15 +575,12 @@
             // alterCargo
             // 
             this.alterCargo.FormattingEnabled = true;
-            this.alterCargo.Items.AddRange(new object[] {
-            "Programador",
-            "BDA",
-            "Helpdesk",
-            "Gerente"});
             this.alterCargo.Location = new System.Drawing.Point(157, 43);
             this.alterCargo.Name = "alterCargo";
             this.alterCargo.Size = new System.Drawing.Size(233, 28);
             this.alterCargo.TabIndex = 37;
+            this.alterCargo.SelectedIndexChanged += new System.EventHandler(this.alterCargo_SelectedIndexChanged);
+            this.alterCargo.VisibleChanged += new System.EventHandler(this.alterCargo_VisibleChanged);
             // 
             // alterDepartamento
             // 

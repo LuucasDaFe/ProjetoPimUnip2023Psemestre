@@ -30,74 +30,74 @@ namespace ProjetoPimUnip2023Psemestre
         }
         public void adicionaFuncionarioBd()
         {
-            NpgsqlConnection conex = new NpgsqlConnection();
+        //    NpgsqlConnection conex = new NpgsqlConnection();
 
-            string server = "localhost";
-            string bd = "sistemaholerite";
-            string user = "postgres";
-            string password = "cr7melhor";
-            string port = "5432";
+        //    string server = "localhost";
+        //    string bd = "sistemaholerite";
+        //    string user = "postgres";
+        //    string password = "cr7melhor";
+        //    string port = "5432";
 
-            string conectBDPim = "server=" + server + ";" + "port=" + port + ";" + "user id=" + user + ";" + "password=" + password + ";" + "database=" + bd + ";";
+        //    string conectBDPim = "server=" + server + ";" + "port=" + port + ";" + "user id=" + user + ";" + "password=" + password + ";" + "database=" + bd + ";";
 
-            string nome = InfoRegistroNome.Text;
-            string nascimento = infoRegistroDataNasc.Text;
-            string endereco = InfoRegistroEndereco.Text;
-            string rg = InfoRegistroRG.Text;
-            string cpf = infoCpf.Text;
-            string cidade = InfoRegistroCidade.Text;
-            string estado = infoEstado.Text;
-            string mae = InforegistroNomeMae.Text;
-            string pai = InfoRegistroNomePai.Text;
-            string estado_civil = InfoRegistroEstadoCivil.Text;
-            string email = InfoRegistroEmail.Text;
-            string telefone = InfoRegistroContato.Text;
-            string Nregistro = InfoNumeroRegistro.Text;
-            string cnh = InfoRegistroCNH.Text;
-            string titulo = InfoRegistroTituloEleitor.Text;
-            string admissao = InfoRegistroDataAdimssao.Text;
-            string departamento = InfoRegistroDepartamento.Text;
-            string nacionalidade = InfoRegistroNacionalidade.Text;
-            string sexo = infoSexo.Text;
-            string salario = InfoSalario.Text;
-            string conta = InfoRegistroContaBanco.Text;
-            string agencia = InfoRegistroAgenciaBanco.Text;
+        //    string nome = txt_addNome.Text;
+        //    string nascimento = txt_addDataNascimento.Text;
+        //    string endereco = txt_addCep.Text;
+        //    string rg = txt_addRg.Text;
+        //    string cpf = txt_addCpf.Text;
+        //    string cidade = txt_addCidade.Text;
+        //    string estado = txt_addEstado.Text;
+        //    string mae = txt_addMae.Text;
+        //    string pai = txt_addPai.Text;
+        //    string estado_civil = txt_addEstadoCivil.Text;
+        //    string email = txt_addEmail.Text;
+        //    string telefone = txt_addContato.Text;
+        //    string Nregistro = txt_add_N_rua.Text;
+        //    string cnh = txt_addT_zona.Text;
+        //    string titulo = txt_addConjuge.Text;
+        //    string admissao = txt_addData_admissao.Text;
+        //    string departamento = txt_addDepartamento.Text;
+        //    string nacionalidade = txt_addNacionalidade.Text;
+        //    string sexo = infoSexo.Text;
+        //    string salario = txt_addSalario.Text;
+        //    string conta = txt_addConta_banco.Text;
+        //    string agencia = txt_addAgencia_banco.Text;
 
-            string comando = "INSERT INTO funcionario (nome, data_nascimento, endereco, rg, cpf, cidade, estado, nome_mae, nome_pai, estado_civil, email, telefone, n_registro, n_cnh, titulo_eleitor, data_admissao, departamento, nascionalidade, sexo, salario, conta_banco, agencia_banco) VALUES (@nome, @data_nascimento, @endereco, @rg, @cpf, @cidade, @estado, @nome_mae, @nome_pai, @estado_civil, @email, @telefone, @n_registro, @n_cnh, @titulo_eleitor, @data_admissao, @departamento, @nascionalidade, @sexo, @salario, @conta_banco, @agencia_banco);";
+        //    string comando = "INSERT INTO funcionario (nome, data_nascimento, endereco, rg, cpf, cidade, estado, nome_mae, nome_pai, estado_civil, email, telefone, n_registro, n_cnh, titulo_eleitor, data_admissao, departamento, nascionalidade, sexo, salario, conta_banco, agencia_banco) VALUES (@nome, @data_nascimento, @endereco, @rg, @cpf, @cidade, @estado, @nome_mae, @nome_pai, @estado_civil, @email, @telefone, @n_registro, @n_cnh, @titulo_eleitor, @data_admissao, @departamento, @nascionalidade, @sexo, @salario, @conta_banco, @agencia_banco);";
 
-            conex.ConnectionString = conectBDPim;
-            NpgsqlCommand cmd = new NpgsqlCommand(comando, conex);
+        //    conex.ConnectionString = conectBDPim;
+        //    NpgsqlCommand cmd = new NpgsqlCommand(comando, conex);
 
 
-            conex.Open();
-            cmd.Parameters.AddWithValue("@nome", nome);
-            cmd.Parameters.AddWithValue("@data_nascimento", Convert.ToDateTime(nascimento));
-            cmd.Parameters.AddWithValue("@endereco", endereco);
-            cmd.Parameters.AddWithValue("@rg", Convert.ToInt32(rg));
-            cmd.Parameters.AddWithValue("@cpf", Convert.ToInt32(cpf));
-            cmd.Parameters.AddWithValue("@cidade", cidade);
-            cmd.Parameters.AddWithValue("@estado", estado);
-            cmd.Parameters.AddWithValue("@nome_mae", mae);
-            cmd.Parameters.AddWithValue("@nome_pai", pai);
-            cmd.Parameters.AddWithValue("@estado_civil", estado_civil);
-            cmd.Parameters.AddWithValue("@email", email);
-            cmd.Parameters.AddWithValue("@telefone", Convert.ToInt32(telefone));
-            cmd.Parameters.AddWithValue("@n_registro", Convert.ToInt32(Nregistro));
-            cmd.Parameters.AddWithValue("@n_cnh",Convert.ToInt32(cnh));
-            cmd.Parameters.AddWithValue("@titulo_eleitor", Convert.ToInt32(titulo));
-            cmd.Parameters.AddWithValue("@data_admissao", Convert.ToDateTime(nascimento));
-            cmd.Parameters.AddWithValue("@departamento", departamento);
-            cmd.Parameters.AddWithValue("@nascionalidade", nacionalidade);
-            cmd.Parameters.AddWithValue("@sexo", sexo);
-            cmd.Parameters.AddWithValue("@salario", Convert.ToSingle(salario));
-            cmd.Parameters.AddWithValue("@conta_banco", Convert.ToInt32(conta));
-            cmd.Parameters.AddWithValue("@agencia_banco", agencia);
+        //    conex.Open();
+        //    cmd.Parameters.AddWithValue("@nome", nome);
+        //    cmd.Parameters.AddWithValue("@data_nascimento", Convert.ToDateTime(nascimento));
+        //    cmd.Parameters.AddWithValue("@endereco", endereco);
+        //    cmd.Parameters.AddWithValue("@rg", Convert.ToInt32(rg));
+        //    cmd.Parameters.AddWithValue("@cpf", Convert.ToInt32(cpf));
+        //    cmd.Parameters.AddWithValue("@cidade", cidade);
+        //    cmd.Parameters.AddWithValue("@estado", estado);
+        //    cmd.Parameters.AddWithValue("@nome_mae", mae);
+        //    cmd.Parameters.AddWithValue("@nome_pai", pai);
+        //    cmd.Parameters.AddWithValue("@estado_civil", estado_civil);
+        //    cmd.Parameters.AddWithValue("@email", email);
+        //    cmd.Parameters.AddWithValue("@telefone", Convert.ToInt32(telefone));
+        //    cmd.Parameters.AddWithValue("@n_registro", Convert.ToInt32(Nregistro));
+        //    cmd.Parameters.AddWithValue("@n_cnh",Convert.ToInt32(cnh));
+        //    cmd.Parameters.AddWithValue("@titulo_eleitor", Convert.ToInt32(titulo));
+        //    cmd.Parameters.AddWithValue("@data_admissao", Convert.ToDateTime(nascimento));
+        //    cmd.Parameters.AddWithValue("@departamento", departamento);
+        //    cmd.Parameters.AddWithValue("@nascionalidade", nacionalidade);
+        //    cmd.Parameters.AddWithValue("@sexo", sexo);
+        //    cmd.Parameters.AddWithValue("@salario", Convert.ToSingle(salario));
+        //    cmd.Parameters.AddWithValue("@conta_banco", Convert.ToInt32(conta));
+        //    cmd.Parameters.AddWithValue("@agencia_banco", agencia);
 
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Novo funcionario adcionado com sucesso!");
-            conex.Close();
+        //    cmd.ExecuteNonQuery();
+        //    MessageBox.Show("Novo funcionario adcionado com sucesso!");
+        //    conex.Close();
 
-        }
+        //}
 
         //private void panel1_Paint(object sender, PaintEventArgs e)
         //{
@@ -179,6 +179,16 @@ namespace ProjetoPimUnip2023Psemestre
         }
 
         private void InfoSalario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InfoRegistroEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
         {
 
         }

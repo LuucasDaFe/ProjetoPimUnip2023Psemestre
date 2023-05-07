@@ -26,5 +26,10 @@ namespace ProjetoPimUnip2023Psemestre
         {
             this.Close();
         }
+
+        private void AlteraPonto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

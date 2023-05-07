@@ -239,6 +239,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AlteraPonto";
             this.Text = "AlteraPonto";
+            this.Load += new System.EventHandler(this.AlteraPonto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
