@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_addEstado = new System.Windows.Forms.ComboBox();
+            this.txt_add_N_rua = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txt_addBairro = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txt_addRua = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.btnFecharPainelFuncionario = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -36,14 +44,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txt_addContato = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txt_addPai = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_addMae = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_addCpf = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_addRg = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txt_addDataNascimento = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_addCidade = new System.Windows.Forms.TextBox();
@@ -51,16 +51,15 @@
             this.txt_addCep = new System.Windows.Forms.TextBox();
             this.txt_addNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.imgregistroFuncionario = new System.Windows.Forms.PictureBox();
+            this.txt_addPai = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_addMae = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txt_addConjuge = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txt_addT_zona = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txt_addDepartamento = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txt_addData_admissao = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.txt_addSexo = new System.Windows.Forms.TextBox();
             this.infoSexo = new System.Windows.Forms.Label();
             this.txt_addNacionalidade = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -74,32 +73,33 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txt_addEstadoCivil = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txt_addCargo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_addRua = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txt_addBairro = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txt_add_N_rua = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txt_addEstado = new System.Windows.Forms.ComboBox();
-            this.txt_addT_eleitor = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txt_addT_secao = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txt_addCert_militar = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txt_addCnh = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.txt_addCtps = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.txt_addPis = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.txt_addCtps_serie = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
             this.txt_addEscolaridade = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cb_addCargo = new System.Windows.Forms.ComboBox();
+            this.cb_addDepartamento = new System.Windows.Forms.ComboBox();
+            this.cb_addSexo = new System.Windows.Forms.ComboBox();
+            this.imgregistroFuncionario = new System.Windows.Forms.PictureBox();
+            this.txt_addCpf = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_addRg = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_addCtps_serie = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txt_addCert_militar = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txt_addT_secao = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txt_addT_eleitor = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_addT_zona = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_addCtps = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txt_addCnh = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txt_addPis = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgregistroFuncionario)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +107,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.txt_addCpf);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.txt_addRg);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txt_addEstado);
             this.panel1.Controls.Add(this.txt_add_N_rua);
@@ -122,10 +126,6 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.txt_addContato);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.txt_addCpf);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txt_addRg);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txt_addDataNascimento);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txt_addCidade);
@@ -138,6 +138,78 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1283, 226);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(751, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 20);
+            this.label2.TabIndex = 87;
+            this.label2.Text = "CEP:";
+            // 
+            // txt_addEstado
+            // 
+            this.txt_addEstado.FormattingEnabled = true;
+            this.txt_addEstado.Location = new System.Drawing.Point(825, 184);
+            this.txt_addEstado.Name = "txt_addEstado";
+            this.txt_addEstado.Size = new System.Drawing.Size(61, 21);
+            this.txt_addEstado.TabIndex = 40;
+            // 
+            // txt_add_N_rua
+            // 
+            this.txt_add_N_rua.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_add_N_rua.Location = new System.Drawing.Point(825, 81);
+            this.txt_add_N_rua.Name = "txt_add_N_rua";
+            this.txt_add_N_rua.Size = new System.Drawing.Size(155, 26);
+            this.txt_add_N_rua.TabIndex = 39;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(751, 87);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(30, 20);
+            this.label25.TabIndex = 38;
+            this.label25.Text = "N°:";
+            // 
+            // txt_addBairro
+            // 
+            this.txt_addBairro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addBairro.Location = new System.Drawing.Point(825, 116);
+            this.txt_addBairro.Name = "txt_addBairro";
+            this.txt_addBairro.Size = new System.Drawing.Size(155, 26);
+            this.txt_addBairro.TabIndex = 37;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(751, 119);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(55, 20);
+            this.label24.TabIndex = 36;
+            this.label24.Text = "Bairro:";
+            // 
+            // txt_addRua
+            // 
+            this.txt_addRua.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addRua.Location = new System.Drawing.Point(825, 49);
+            this.txt_addRua.Name = "txt_addRua";
+            this.txt_addRua.Size = new System.Drawing.Size(355, 26);
+            this.txt_addRua.TabIndex = 35;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(751, 55);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 20);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "Rua:";
             // 
             // btnFecharPainelFuncionario
             // 
@@ -205,78 +277,6 @@
             this.label11.TabIndex = 27;
             this.label11.Text = "Contato:";
             // 
-            // txt_addPai
-            // 
-            this.txt_addPai.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addPai.Location = new System.Drawing.Point(944, 433);
-            this.txt_addPai.Name = "txt_addPai";
-            this.txt_addPai.Size = new System.Drawing.Size(330, 26);
-            this.txt_addPai.TabIndex = 24;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(816, 436);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 20);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Nome pai:";
-            // 
-            // txt_addMae
-            // 
-            this.txt_addMae.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addMae.Location = new System.Drawing.Point(944, 401);
-            this.txt_addMae.Name = "txt_addMae";
-            this.txt_addMae.Size = new System.Drawing.Size(330, 26);
-            this.txt_addMae.TabIndex = 22;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(816, 404);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 20);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Nome mãe:";
-            // 
-            // txt_addCpf
-            // 
-            this.txt_addCpf.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addCpf.Location = new System.Drawing.Point(323, 81);
-            this.txt_addCpf.Name = "txt_addCpf";
-            this.txt_addCpf.Size = new System.Drawing.Size(232, 26);
-            this.txt_addCpf.TabIndex = 20;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(222, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 20);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "CPF:";
-            // 
-            // txt_addRg
-            // 
-            this.txt_addRg.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addRg.Location = new System.Drawing.Point(323, 49);
-            this.txt_addRg.Name = "txt_addRg";
-            this.txt_addRg.Size = new System.Drawing.Size(184, 26);
-            this.txt_addRg.TabIndex = 18;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(222, 55);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 20);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "RG:";
-            // 
             // txt_addDataNascimento
             // 
             this.txt_addDataNascimento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -341,16 +341,41 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Nome:";
             // 
-            // imgregistroFuncionario
+            // txt_addPai
             // 
-            this.imgregistroFuncionario.BackColor = System.Drawing.Color.Transparent;
-            this.imgregistroFuncionario.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagem_Icone_Funcionario;
-            this.imgregistroFuncionario.Location = new System.Drawing.Point(27, 14);
-            this.imgregistroFuncionario.Name = "imgregistroFuncionario";
-            this.imgregistroFuncionario.Size = new System.Drawing.Size(178, 191);
-            this.imgregistroFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgregistroFuncionario.TabIndex = 3;
-            this.imgregistroFuncionario.TabStop = false;
+            this.txt_addPai.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addPai.Location = new System.Drawing.Point(944, 433);
+            this.txt_addPai.Name = "txt_addPai";
+            this.txt_addPai.Size = new System.Drawing.Size(330, 26);
+            this.txt_addPai.TabIndex = 24;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(816, 436);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 20);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Nome pai:";
+            // 
+            // txt_addMae
+            // 
+            this.txt_addMae.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addMae.Location = new System.Drawing.Point(944, 401);
+            this.txt_addMae.Name = "txt_addMae";
+            this.txt_addMae.Size = new System.Drawing.Size(330, 26);
+            this.txt_addMae.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(816, 404);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 20);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Nome mãe:";
             // 
             // txt_addConjuge
             // 
@@ -369,33 +394,6 @@
             this.label15.Size = new System.Drawing.Size(76, 20);
             this.label15.TabIndex = 14;
             this.label15.Text = "Conjuge:";
-            // 
-            // txt_addT_zona
-            // 
-            this.txt_addT_zona.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addT_zona.Location = new System.Drawing.Point(568, 264);
-            this.txt_addT_zona.Name = "txt_addT_zona";
-            this.txt_addT_zona.Size = new System.Drawing.Size(224, 26);
-            this.txt_addT_zona.TabIndex = 13;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(440, 302);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(123, 20);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "Titulo de Seção:";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // txt_addDepartamento
-            // 
-            this.txt_addDepartamento.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addDepartamento.Location = new System.Drawing.Point(171, 296);
-            this.txt_addDepartamento.Name = "txt_addDepartamento";
-            this.txt_addDepartamento.Size = new System.Drawing.Size(221, 26);
-            this.txt_addDepartamento.TabIndex = 19;
             // 
             // label17
             // 
@@ -424,14 +422,6 @@
             this.label18.Size = new System.Drawing.Size(145, 20);
             this.label18.TabIndex = 16;
             this.label18.Text = "Data de admissão:";
-            // 
-            // txt_addSexo
-            // 
-            this.txt_addSexo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addSexo.Location = new System.Drawing.Point(944, 299);
-            this.txt_addSexo.Name = "txt_addSexo";
-            this.txt_addSexo.Size = new System.Drawing.Size(192, 26);
-            this.txt_addSexo.TabIndex = 23;
             // 
             // infoSexo
             // 
@@ -560,14 +550,6 @@
             this.label10.TabIndex = 34;
             this.label10.Text = "Estado civil:";
             // 
-            // txt_addCargo
-            // 
-            this.txt_addCargo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addCargo.Location = new System.Drawing.Point(171, 331);
-            this.txt_addCargo.Name = "txt_addCargo";
-            this.txt_addCargo.Size = new System.Drawing.Size(221, 26);
-            this.txt_addCargo.TabIndex = 33;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -577,194 +559,6 @@
             this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 32;
             this.label4.Text = "Cargo:";
-            // 
-            // txt_addRua
-            // 
-            this.txt_addRua.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addRua.Location = new System.Drawing.Point(825, 49);
-            this.txt_addRua.Name = "txt_addRua";
-            this.txt_addRua.Size = new System.Drawing.Size(355, 26);
-            this.txt_addRua.TabIndex = 35;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(751, 55);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 20);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Rua:";
-            // 
-            // txt_addBairro
-            // 
-            this.txt_addBairro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addBairro.Location = new System.Drawing.Point(825, 116);
-            this.txt_addBairro.Name = "txt_addBairro";
-            this.txt_addBairro.Size = new System.Drawing.Size(155, 26);
-            this.txt_addBairro.TabIndex = 37;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(751, 119);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(55, 20);
-            this.label24.TabIndex = 36;
-            this.label24.Text = "Bairro:";
-            // 
-            // txt_add_N_rua
-            // 
-            this.txt_add_N_rua.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_add_N_rua.Location = new System.Drawing.Point(825, 81);
-            this.txt_add_N_rua.Name = "txt_add_N_rua";
-            this.txt_add_N_rua.Size = new System.Drawing.Size(155, 26);
-            this.txt_add_N_rua.TabIndex = 39;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(751, 87);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(30, 20);
-            this.label25.TabIndex = 38;
-            this.label25.Text = "N°:";
-            // 
-            // txt_addEstado
-            // 
-            this.txt_addEstado.FormattingEnabled = true;
-            this.txt_addEstado.Location = new System.Drawing.Point(825, 184);
-            this.txt_addEstado.Name = "txt_addEstado";
-            this.txt_addEstado.Size = new System.Drawing.Size(61, 21);
-            this.txt_addEstado.TabIndex = 40;
-            // 
-            // txt_addT_eleitor
-            // 
-            this.txt_addT_eleitor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addT_eleitor.Location = new System.Drawing.Point(568, 232);
-            this.txt_addT_eleitor.Name = "txt_addT_eleitor";
-            this.txt_addT_eleitor.Size = new System.Drawing.Size(224, 26);
-            this.txt_addT_eleitor.TabIndex = 37;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(440, 238);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(122, 20);
-            this.label14.TabIndex = 36;
-            this.label14.Text = "Titulo de eleitor:";
-            // 
-            // txt_addT_secao
-            // 
-            this.txt_addT_secao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addT_secao.Location = new System.Drawing.Point(568, 296);
-            this.txt_addT_secao.Name = "txt_addT_secao";
-            this.txt_addT_secao.Size = new System.Drawing.Size(224, 26);
-            this.txt_addT_secao.TabIndex = 39;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(440, 270);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(111, 20);
-            this.label26.TabIndex = 38;
-            this.label26.Text = "Titulo de zona:";
-            // 
-            // txt_addCert_militar
-            // 
-            this.txt_addCert_militar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addCert_militar.Location = new System.Drawing.Point(568, 331);
-            this.txt_addCert_militar.Name = "txt_addCert_militar";
-            this.txt_addCert_militar.Size = new System.Drawing.Size(224, 26);
-            this.txt_addCert_militar.TabIndex = 41;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(440, 337);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(95, 20);
-            this.label27.TabIndex = 40;
-            this.label27.Text = "Cert. militar:";
-            // 
-            // txt_addCnh
-            // 
-            this.txt_addCnh.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addCnh.Location = new System.Drawing.Point(568, 363);
-            this.txt_addCnh.Name = "txt_addCnh";
-            this.txt_addCnh.Size = new System.Drawing.Size(224, 26);
-            this.txt_addCnh.TabIndex = 43;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(440, 369);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(67, 20);
-            this.label28.TabIndex = 42;
-            this.label28.Text = "N° CNH:";
-            // 
-            // txt_addCtps
-            // 
-            this.txt_addCtps.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addCtps.Location = new System.Drawing.Point(568, 398);
-            this.txt_addCtps.Name = "txt_addCtps";
-            this.txt_addCtps.Size = new System.Drawing.Size(224, 26);
-            this.txt_addCtps.TabIndex = 45;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(440, 404);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(46, 20);
-            this.label29.TabIndex = 44;
-            this.label29.Text = "CTPS:";
-            // 
-            // txt_addPis
-            // 
-            this.txt_addPis.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addPis.Location = new System.Drawing.Point(171, 430);
-            this.txt_addPis.Name = "txt_addPis";
-            this.txt_addPis.Size = new System.Drawing.Size(224, 26);
-            this.txt_addPis.TabIndex = 47;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(23, 436);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(34, 20);
-            this.label30.TabIndex = 46;
-            this.label30.Text = "PIS:";
-            // 
-            // txt_addCtps_serie
-            // 
-            this.txt_addCtps_serie.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addCtps_serie.Location = new System.Drawing.Point(568, 430);
-            this.txt_addCtps_serie.Name = "txt_addCtps_serie";
-            this.txt_addCtps_serie.Size = new System.Drawing.Size(224, 26);
-            this.txt_addCtps_serie.TabIndex = 49;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(440, 436);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(87, 20);
-            this.label31.TabIndex = 48;
-            this.label31.Text = "CTPS SERIE:";
             // 
             // txt_addEscolaridade
             // 
@@ -784,15 +578,225 @@
             this.label32.TabIndex = 50;
             this.label32.Text = "Escolaridade:";
             // 
-            // label2
+            // cb_addCargo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(751, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 20);
-            this.label2.TabIndex = 87;
-            this.label2.Text = "CEP:";
+            this.cb_addCargo.FormattingEnabled = true;
+            this.cb_addCargo.Location = new System.Drawing.Point(171, 336);
+            this.cb_addCargo.Name = "cb_addCargo";
+            this.cb_addCargo.Size = new System.Drawing.Size(160, 21);
+            this.cb_addCargo.TabIndex = 53;
+            this.cb_addCargo.VisibleChanged += new System.EventHandler(this.cm_addCargo_VisibleChanged);
+            // 
+            // cb_addDepartamento
+            // 
+            this.cb_addDepartamento.FormattingEnabled = true;
+            this.cb_addDepartamento.Location = new System.Drawing.Point(171, 304);
+            this.cb_addDepartamento.Name = "cb_addDepartamento";
+            this.cb_addDepartamento.Size = new System.Drawing.Size(160, 21);
+            this.cb_addDepartamento.TabIndex = 54;
+            this.cb_addDepartamento.VisibleChanged += new System.EventHandler(this.cb_addDepartamento_VisibleChanged);
+            // 
+            // cb_addSexo
+            // 
+            this.cb_addSexo.FormattingEnabled = true;
+            this.cb_addSexo.Items.AddRange(new object[] {
+            "MASCULINO",
+            "FEIMININO"});
+            this.cb_addSexo.Location = new System.Drawing.Point(944, 301);
+            this.cb_addSexo.Name = "cb_addSexo";
+            this.cb_addSexo.Size = new System.Drawing.Size(160, 21);
+            this.cb_addSexo.TabIndex = 55;
+            // 
+            // imgregistroFuncionario
+            // 
+            this.imgregistroFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.imgregistroFuncionario.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagem_Icone_Funcionario;
+            this.imgregistroFuncionario.Location = new System.Drawing.Point(27, 14);
+            this.imgregistroFuncionario.Name = "imgregistroFuncionario";
+            this.imgregistroFuncionario.Size = new System.Drawing.Size(178, 191);
+            this.imgregistroFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgregistroFuncionario.TabIndex = 3;
+            this.imgregistroFuncionario.TabStop = false;
+            // 
+            // txt_addCpf
+            // 
+            this.txt_addCpf.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCpf.Location = new System.Drawing.Point(323, 81);
+            this.txt_addCpf.Name = "txt_addCpf";
+            this.txt_addCpf.Size = new System.Drawing.Size(224, 26);
+            this.txt_addCpf.TabIndex = 91;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(220, 87);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 20);
+            this.label7.TabIndex = 90;
+            this.label7.Text = "CPF:";
+            // 
+            // txt_addRg
+            // 
+            this.txt_addRg.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addRg.Location = new System.Drawing.Point(323, 49);
+            this.txt_addRg.Name = "txt_addRg";
+            this.txt_addRg.Size = new System.Drawing.Size(184, 26);
+            this.txt_addRg.TabIndex = 89;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(220, 55);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 20);
+            this.label6.TabIndex = 88;
+            this.label6.Text = "RG:";
+            // 
+            // txt_addCtps_serie
+            // 
+            this.txt_addCtps_serie.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCtps_serie.Location = new System.Drawing.Point(521, 436);
+            this.txt_addCtps_serie.Name = "txt_addCtps_serie";
+            this.txt_addCtps_serie.Size = new System.Drawing.Size(224, 26);
+            this.txt_addCtps_serie.TabIndex = 73;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(393, 442);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(87, 20);
+            this.label31.TabIndex = 72;
+            this.label31.Text = "CTPS SERIE:";
+            // 
+            // txt_addCert_militar
+            // 
+            this.txt_addCert_militar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCert_militar.Location = new System.Drawing.Point(521, 229);
+            this.txt_addCert_militar.Name = "txt_addCert_militar";
+            this.txt_addCert_militar.Size = new System.Drawing.Size(224, 26);
+            this.txt_addCert_militar.TabIndex = 71;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(393, 235);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(95, 20);
+            this.label27.TabIndex = 70;
+            this.label27.Text = "Cert. militar:";
+            // 
+            // txt_addT_secao
+            // 
+            this.txt_addT_secao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addT_secao.Location = new System.Drawing.Point(521, 364);
+            this.txt_addT_secao.Name = "txt_addT_secao";
+            this.txt_addT_secao.Size = new System.Drawing.Size(224, 26);
+            this.txt_addT_secao.TabIndex = 69;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(393, 338);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(111, 20);
+            this.label26.TabIndex = 68;
+            this.label26.Text = "Titulo de zona:";
+            // 
+            // txt_addT_eleitor
+            // 
+            this.txt_addT_eleitor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addT_eleitor.Location = new System.Drawing.Point(521, 300);
+            this.txt_addT_eleitor.Name = "txt_addT_eleitor";
+            this.txt_addT_eleitor.Size = new System.Drawing.Size(224, 26);
+            this.txt_addT_eleitor.TabIndex = 67;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(393, 306);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(122, 20);
+            this.label14.TabIndex = 66;
+            this.label14.Text = "Titulo de eleitor:";
+            // 
+            // txt_addT_zona
+            // 
+            this.txt_addT_zona.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addT_zona.Location = new System.Drawing.Point(521, 332);
+            this.txt_addT_zona.Name = "txt_addT_zona";
+            this.txt_addT_zona.Size = new System.Drawing.Size(224, 26);
+            this.txt_addT_zona.TabIndex = 65;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(393, 370);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(123, 20);
+            this.label16.TabIndex = 64;
+            this.label16.Text = "Titulo de Seção:";
+            // 
+            // txt_addCtps
+            // 
+            this.txt_addCtps.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCtps.Location = new System.Drawing.Point(521, 401);
+            this.txt_addCtps.Name = "txt_addCtps";
+            this.txt_addCtps.Size = new System.Drawing.Size(224, 26);
+            this.txt_addCtps.TabIndex = 77;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(393, 407);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(46, 20);
+            this.label29.TabIndex = 76;
+            this.label29.Text = "CTPS:";
+            // 
+            // txt_addCnh
+            // 
+            this.txt_addCnh.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCnh.Location = new System.Drawing.Point(521, 264);
+            this.txt_addCnh.Name = "txt_addCnh";
+            this.txt_addCnh.Size = new System.Drawing.Size(224, 26);
+            this.txt_addCnh.TabIndex = 75;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(393, 270);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(67, 20);
+            this.label28.TabIndex = 74;
+            this.label28.Text = "N° CNH:";
+            // 
+            // txt_addPis
+            // 
+            this.txt_addPis.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addPis.Location = new System.Drawing.Point(93, 442);
+            this.txt_addPis.Name = "txt_addPis";
+            this.txt_addPis.Size = new System.Drawing.Size(238, 26);
+            this.txt_addPis.TabIndex = 79;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(23, 448);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(34, 20);
+            this.label30.TabIndex = 78;
+            this.label30.Text = "PIS:";
             // 
             // InformacoesResgitro
             // 
@@ -800,25 +804,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1281, 528);
-            this.Controls.Add(this.txt_addEscolaridade);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.txt_addCtps_serie);
-            this.Controls.Add(this.label31);
             this.Controls.Add(this.txt_addPis);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.txt_addCtps);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.txt_addCnh);
             this.Controls.Add(this.label28);
+            this.Controls.Add(this.txt_addCtps_serie);
+            this.Controls.Add(this.label31);
             this.Controls.Add(this.txt_addCert_militar);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.txt_addT_secao);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.txt_addT_eleitor);
             this.Controls.Add(this.label14);
+            this.Controls.Add(this.txt_addT_zona);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.cb_addSexo);
+            this.Controls.Add(this.cb_addDepartamento);
+            this.Controls.Add(this.cb_addCargo);
+            this.Controls.Add(this.txt_addEscolaridade);
+            this.Controls.Add(this.label32);
             this.Controls.Add(this.txt_addEstadoCivil);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txt_addCargo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.button1);
@@ -832,18 +840,14 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_addSalario);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.txt_addSexo);
             this.Controls.Add(this.infoSexo);
             this.Controls.Add(this.txt_addNacionalidade);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.txt_addDepartamento);
             this.Controls.Add(this.txt_addData_admissao);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.txt_addConjuge);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.txt_addT_zona);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InformacoesResgitro";
@@ -874,22 +878,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_addMae;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_addCpf;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_addRg;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_addDataNascimento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txt_addConjuge;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txt_addT_zona;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txt_addDepartamento;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txt_addData_admissao;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txt_addSexo;
         private System.Windows.Forms.Label infoSexo;
         private System.Windows.Forms.TextBox txt_addNacionalidade;
         private System.Windows.Forms.Label label20;
@@ -905,7 +901,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txt_addEstadoCivil;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txt_addCargo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox txt_addEstado;
         private System.Windows.Forms.TextBox txt_add_N_rua;
@@ -914,22 +909,31 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txt_addRua;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txt_addT_eleitor;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txt_addT_secao;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox txt_addCert_militar;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txt_addCnh;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox txt_addCtps;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox txt_addPis;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox txt_addCtps_serie;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox txt_addEscolaridade;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cb_addCargo;
+        private System.Windows.Forms.ComboBox cb_addDepartamento;
+        private System.Windows.Forms.ComboBox cb_addSexo;
+        private System.Windows.Forms.TextBox txt_addCpf;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_addRg;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_addCtps_serie;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txt_addCert_militar;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txt_addT_secao;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox txt_addT_eleitor;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txt_addT_zona;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txt_addCtps;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txt_addCnh;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txt_addPis;
+        private System.Windows.Forms.Label label30;
     }
 }

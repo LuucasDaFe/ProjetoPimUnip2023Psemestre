@@ -120,11 +120,29 @@
     <Compile Include="Colaboradores.Designer.cs">
       <DependentUpon>Colaboradores.cs</DependentUpon>
     </Compile>
+    <Compile Include="documentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="documentos.Designer.cs">
+      <DependentUpon>documentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="endereco_contato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="endereco_contato.Designer.cs">
+      <DependentUpon>endereco_contato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funcionario_cargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="funcionario_cargo.Designer.cs">
+      <DependentUpon>funcionario_cargo.cs</DependentUpon>
     </Compile>
     <Compile Include="Holerite.cs">
       <SubType>Form</SubType>
@@ -166,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Colaboradores.resx">
       <DependentUpon>Colaboradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="documentos.resx">
+      <DependentUpon>documentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

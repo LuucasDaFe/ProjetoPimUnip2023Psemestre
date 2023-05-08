@@ -3,6 +3,7 @@ using Org.BouncyCastle.Asn1.Cms;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -114,7 +115,69 @@ namespace ProjetoPimUnip2023Psemestre.Classes
 
             return valor;
         }
+        public int lerIdCargo(string idCargo)
+        {
+            int id;
 
+            switch (idCargo)
+            {
+                case "ATENDENTE":
+                    id = 1; return id;
+                case "CHAPEIRO":
+                    id = 2; return id;
+                case "FAXINEIRO":
+                    id = 3; return id;
+                case "OPERADOR DE CAIXA":
+                    id = 4; return id;
+                case "GERENTE":
+                    id = 5; return id;
+                case "ENTREGADOR":
+                    id = 6; return id;
+                case "GARCOM":
+                    id = 7; return id;
+                default:
+                    throw new ArgumentException("Cargo inválido: " + idCargo);
+            }
+        }
+        public int lerIdDepartamento(string idDepartamento)
+        {
+            int id;
+
+            switch (idDepartamento)
+            {
+                case "ATENDIMENTO":
+                    id = 1;
+                    return id;
+                case "COZINHA":
+                    id = 2;
+                    return id;
+                case "LIMPEZA":
+                    id = 3;
+                    return id;
+                case "CAIXA":
+                    id = 4;
+                    return id;
+                case "ESTOQUE":
+                    id = 5;
+                    return id;
+                default:
+                    throw new ArgumentException("Departamento inválido: " + idDepartamento);
+            }
+            
+        }
+        public string lerSexo(string sexo)
+        {
+            string x;
+            switch (sexo)
+            {
+                case "MASCULINO":
+                    x = "M"; return x;
+                case "FEIMININO":
+                    x = "F"; return x;
+                default:
+                    throw new ArgumentException("Sexo inválido: " + sexo);
+            }
+        }
         public string lerDadosFloat(string atributo, string entidade, string condicao)
         {
 
@@ -132,15 +195,6 @@ namespace ProjetoPimUnip2023Psemestre.Classes
 
             return valor;
         }
-        public void conectar()
-        {
-            conex.Open();
-        }
-        public void desconectar()
-        {
-            conex.Close();
-        }
-
         public DataTable incluirInfoDgvColaboradores(string comandoSql)
         {           
             conex.ConnectionString = correnteConexao;
@@ -153,7 +207,6 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             conex.Close();
             return tabela;
         }
-
         public DataTable pesquisarColaborador(string funcionario)
         {
             string comandoSql = "SELECT * FROM info_holerite_funcionarios where colaborador LIKE '%"+funcionario+"%';";
@@ -219,13 +272,16 @@ namespace ProjetoPimUnip2023Psemestre.Classes
         }
         public void adicionar_funcionario(string nome, string sexo, string nasci, string estado_civil, string conjuge,string escolaridade, string nacionalidade, string mae, string pai, string conta, string agencia)
         {
-            string comando = "INSERT INTO funcionario(nome, sexo, nascimento, estado_civil, nome_conjuge, escolaridade, nacionalidade, nome_mae, nome_pai, numeroconta, agencia) VALUES (@nome, @sexo, @nascimento, @estado_civil, @nome_conjuge, @escolaridade, @nacionalidade, @nome_mae, @nome_pai, @numeroconta, @agencia)";
-
+            string comando = "INSERT INTO funcionario(idfuncionario, nome, sexo, nascimento, estado_civil, nome_conjuge, escolaridade, nacionalidade, nome_mae, nome_pai, numeroconta, agencia) VALUES (@idfuncionario, @nome, @sexo, @nascimento, @estado_civil, @nome_conjuge, @escolaridade, @nacionalidade, @nome_mae, @nome_pai, @numeroconta, @agencia)";
+            conex.ConnectionString = correnteConexao;
             NpgsqlCommand cmd = new NpgsqlCommand(comando, conex);
 
+            int id_F = addQtdLinhas(); // Gerando Id do funcionario para table documentos
+            string id_funcionario = id_F.ToString();
             conex.Open();
+            cmd.Parameters.AddWithValue("@idfuncionario", Convert.ToInt32(id_funcionario));
             cmd.Parameters.AddWithValue("@nome", nome);
-            cmd.Parameters.AddWithValue("@sexo", sexo);
+            cmd.Parameters.AddWithValue("@sexo", Convert.ToChar(sexo));
             cmd.Parameters.AddWithValue("@nascimento", Convert.ToDateTime(nasci));
             cmd.Parameters.AddWithValue("@estado_civil", estado_civil);
             cmd.Parameters.AddWithValue("@nome_conjuge", conjuge);
@@ -237,14 +293,31 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             cmd.Parameters.AddWithValue("@agencia", agencia);
 
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Novo funcionario adcionado com sucesso!");
             conex.Close();
         }
+        public void adiciionar_funcionario_cargo(string salario, string id_departamento, string data_inicio_cargo, string id_cargo)
+        {
+            string comando = "INSERT INTO funcionario_cargo (salario, id_funcionario, id_departamento, data_inicio_cargo, id_cargo) VALUES (@salario, @id_funcionario, @id_departamento, @data_inicio_cargo, @id_cargo)";
+            conex.ConnectionString = correnteConexao;
+            NpgsqlCommand cmd = new NpgsqlCommand(comando, conex);
+            string id_funcionario = lerQtdLinhas().ToString();
 
+            conex.Open();
+
+            cmd.Parameters.AddWithValue("@salario", Convert.ToDouble(salario)); 
+            cmd.Parameters.AddWithValue("@id_funcionario", Convert.ToInt32(id_funcionario)); 
+            cmd.Parameters.AddWithValue("@id_departamento", Convert.ToInt32(id_departamento)); 
+            cmd.Parameters.AddWithValue("@data_inicio_cargo", Convert.ToDateTime(data_inicio_cargo)); 
+            cmd.Parameters.AddWithValue("@id_cargo", Convert.ToInt32(id_cargo));
+
+            cmd.ExecuteNonQuery();
+            conex.Close();
+
+        }
         public void adicionar_documento(string cpf, string pis, string rg, string titulo_eleitor, string titulo_zona, string titulo_secao, string cert_militar, string cnh, string ctps, string ctps_serie, string id)
         {
             string comando = "INSERT INTO documentos (cpf, pis, rg, titulo_eleitor, titulo_zona, titulo_secao, cert_militar, cnh, ctps, ctps_serie, id_funcionario) VALUES (@cpf, @pis, @rg, @titulo_eleitor, @titulo_zona, @titulo_secao, @cert_militar, @cnh, @ctps, @ctps_serie, @id_funcionario)";
-
+            conex.ConnectionString = correnteConexao;
             NpgsqlCommand cmd = new NpgsqlCommand(comando, conex);
 
             conex.Open();
@@ -258,44 +331,63 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             cmd.Parameters.AddWithValue("@cert_militar", cert_militar);
             cmd.Parameters.AddWithValue("@cnh", cnh);
             cmd.Parameters.AddWithValue("@ctps", ctps);
-            cmd.Parameters.AddWithValue("@ctps", ctps_serie);
-            cmd.Parameters.AddWithValue("@id_funcionario", id);
+            cmd.Parameters.AddWithValue("@ctps_serie", ctps_serie);
+            cmd.Parameters.AddWithValue("@id_funcionario", Convert.ToInt32(id));
 
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Novo funcionario adcionado com sucesso!");
             conex.Close();
 
             conex.Close();
         }
-        public void adicionar_endereco_contato(string cep, string logradouro, string numero, string bairro,string cidade, string estado, string celular, string id_funcionario, string idendereco_contato, string email)
+        public void adicionar_endereco_contato(string cep, string logradouro, string numero, string bairro,string cidade, string estado, string celular,string email)
         {
-            string comando = "INSERT INTO endereco_contato (cep, logradouro, numero, bairro, cidade, @estado, celular,id_funcionario, idendereco_contato, email) VALUES (@cep, @logradouro, @numero, @bairro, @cidade,@estado, @celular,@id_funcionario, @idendereco_contato, @email)";
-
+            string comando = "INSERT INTO endereco_contato (cep, logradouro, numero, bairro, cidade, estado, celular,id_funcionario,email) VALUES (@cep, @logradouro, @numero, @bairro, @cidade, @estado, @celular,@id_funcionario, @email)";
+            conex.ConnectionString = correnteConexao;
             NpgsqlCommand cmd = new NpgsqlCommand(comando, conex);
-
+            string id_funcionario = lerQtdLinhas().ToString();
             conex.Open();
 
             cmd.Parameters.AddWithValue("@cep", cep);
-            cmd.Parameters.AddWithValue("@ logradouro", logradouro);
+            cmd.Parameters.AddWithValue("@logradouro", logradouro);
             cmd.Parameters.AddWithValue("@numero", numero);
             cmd.Parameters.AddWithValue("@bairro", bairro);
             cmd.Parameters.AddWithValue("@cidade", cidade);
             cmd.Parameters.AddWithValue("@estado", estado);
             cmd.Parameters.AddWithValue("@celular",celular);
-            cmd.Parameters.AddWithValue("@Id_funcionario", id_funcionario);
-            cmd.Parameters.AddWithValue("@idendereco_contato", idendereco_contato);
+            cmd.Parameters.AddWithValue("@id_funcionario", Convert.ToInt32(id_funcionario));
             cmd.Parameters.AddWithValue("@email", email);
+
+            cmd.ExecuteNonQuery();
+            conex.Close();
 
         }
         public int lerQtdLinhas()
         {
             string comando = "SELECT COUNT(*) FROM funcionario;";
+            conex.ConnectionString = correnteConexao;
             NpgsqlCommand cmd = new NpgsqlCommand(comando, conex);
 
             conex.Open();
-            int valor = (int)cmd.ExecuteScalar();
+            object result = cmd.ExecuteScalar();
+            int valor = Convert.ToInt32(result);
+            conex.Close();
+
+            return valor;
+        }
+        public int addQtdLinhas()
+        {
+            string comando = "SELECT COUNT(*) FROM funcionario;";
+            conex.ConnectionString = correnteConexao;
+            NpgsqlCommand cmd = new NpgsqlCommand(comando, conex);
+
+            conex.Open();
+            object result = cmd.ExecuteScalar();
+            int valor = Convert.ToInt32(result);
+            conex.Close();
+
             return valor + 1;
         }
+
         private string cargo = "cargo";
         public string cargoX
         {

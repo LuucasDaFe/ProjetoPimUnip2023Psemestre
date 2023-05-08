@@ -1,5 +1,6 @@
 ﻿using iTextSharp.text.pdf.codec.wmf;
 using Npgsql;
+using Npgsql.Replication.PgOutput.Messages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace ProjetoPimUnip2023Psemestre
         {
             InitializeComponent();
         }
-
+        Classes.ConexaoBd con = new Classes.ConexaoBd();
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
@@ -28,8 +29,8 @@ namespace ProjetoPimUnip2023Psemestre
         {
 
         }
-        public void adicionaFuncionarioBd()
-        {
+        //public void adicionaFuncionarioBd()
+        //{
         //    NpgsqlConnection conex = new NpgsqlConnection();
 
         //    string server = "localhost";
@@ -165,7 +166,8 @@ namespace ProjetoPimUnip2023Psemestre
 
         private void button1_Click(object sender, EventArgs e)
         {
-            adicionaFuncionarioBd();
+            AddFuncionario();
+            
         }
 
         private void InfoRegistroNome_TextChanged(object sender, EventArgs e)
@@ -191,6 +193,79 @@ namespace ProjetoPimUnip2023Psemestre
         private void label16_Click(object sender, EventArgs e)
         {
 
+        }
+        public void AddFuncionario()
+        {
+            //Adicionar na table funcionario
+            string nome = txt_addNome.Text;
+            string sexo = con.lerSexo(cb_addSexo.Text);
+            string nascimento = txt_addDataNascimento.Text;
+            string estado_civil = txt_addEstadoCivil.Text;
+            string nome_conjuge = txt_addConjuge.Text;
+            string escolaridade = txt_addEscolaridade.Text;
+            string nacionalidade = txt_addNacionalidade.Text;
+            string nome_mae = txt_addMae.Text;
+            string nome_pai = txt_addPai.Text;
+            string numeroconta = txt_addConta_banco.Text;
+            string agencia = txt_addAgencia_banco.Text;
+
+            con.adicionar_funcionario(nome, sexo, nascimento, estado_civil, nome_conjuge, escolaridade, nacionalidade, nome_mae, nome_pai, numeroconta, agencia);
+
+            this.Close();
+
+            int id_F = con.lerQtdLinhas(); // Gerando Id do funcionario para table documentos
+
+            string cpf = txt_addCpf.Text;
+            string pis = txt_addPis.Text;
+            string rg = txt_addRg.Text;
+            string titulo_eleitor = txt_addT_eleitor.Text;
+            string titulo_zona = txt_addT_zona.Text;
+            string titulo_secao = txt_addT_secao.Text;
+            string cert_militar = txt_addCert_militar.Text;
+            string cnh = txt_addCnh.Text;
+            string ctps = txt_addCtps.Text;
+            string ctps_serie = txt_addCtps_serie.Text;
+            string id_funcionario = id_F.ToString();
+
+            con.adicionar_documento(cpf, pis, rg, titulo_eleitor, titulo_zona, titulo_secao, cert_militar, cnh, ctps, ctps_serie, id_funcionario);
+
+            // adicionar table endereco_contato
+            string cep = txt_addCep.Text;
+            string logredouro = txt_addRua.Text;
+            string numero = txt_add_N_rua.Text;
+            string bairro = txt_addBairro.Text;
+            string cidade = txt_addCidade.Text;
+            string estado = txt_addEstado.Text;
+            string celular = txt_addContato.Text;
+            string email = txt_addEmail.Text;
+
+            con.adicionar_endereco_contato(cep, logredouro, numero, bairro, cidade, estado, celular, email);
+
+            string salario = txt_addSalario.Text;
+            string id_departamento = con.lerIdDepartamento(cb_addDepartamento.Text).ToString();
+            string data_inicio_cargo = txt_addData_admissao.Text;
+            string id_cargo = con.lerIdCargo(cb_addCargo.Text).ToString();
+
+            con.adiciionar_funcionario_cargo(salario, id_departamento, data_inicio_cargo, id_cargo);
+            MessageBox.Show("Novo funcionario adcionado com sucesso!");
+        }
+        
+        private void cm_addCargo_VisibleChanged(object sender, EventArgs e)
+        {
+            Classes.ConexaoBd objConect = new Classes.ConexaoBd();
+            string atributo = "nome_cargo";
+            string entidade = "cargo";
+            cb_addCargo.DataSource = objConect.mostrarNoComboBOx(atributo, entidade);
+            cb_addCargo.ValueMember = atributo;
+        }
+
+        private void cb_addDepartamento_VisibleChanged(object sender, EventArgs e)
+        {
+            Classes.ConexaoBd objConect = new Classes.ConexaoBd();
+            string comando = "nome_departamento";
+            string entidade = "departamento";
+            cb_addDepartamento.DataSource = objConect.mostrarNoComboBOx(comando, entidade);
+            cb_addDepartamento.ValueMember = comando;
         }
     }
 }
