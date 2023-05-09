@@ -53,5 +53,32 @@ namespace ProjetoPimUnip2023Psemestre
         {
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Classes.ConexaoBd con = new Classes.ConexaoBd();
+            string nome = txtBarraPesquisaNomePonto.Text;
+            string id_funcionario = con.consultarIdFuncionario(nome);
+
+            string x = cbSelecionaMes.Text;
+            string mes = con.verificaMesSelcionado(x);
+            dgvRegistroHora.DataSource = con.mostrarRegistroHoras(id_funcionario,x);
+
+
+        }
+
+        private void txtBarraPesquisaNomePonto_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barraPesquisaConsulta_VisibleChanged(object sender, EventArgs e)
+        {
+            Classes.ConexaoBd objConect = new Classes.ConexaoBd();
+            string comando = "nome";
+            string entidade = "funcionario";
+            txtBarraPesquisaNomePonto.DataSource = objConect.mostrarNoComboBOx(comando, entidade);
+            txtBarraPesquisaNomePonto.ValueMember = comando;
+        }
     }
 }

@@ -52,5 +52,14 @@ namespace ProjetoPimUnip2023Psemestre
         {
             abrirFormNoPainel(new RegistroFuncionario());
         }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+ 
+        }
+
+        private void barraConsultaFuncionario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

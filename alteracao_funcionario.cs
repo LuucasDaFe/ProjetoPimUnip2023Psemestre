@@ -235,5 +235,10 @@ namespace ProjetoPimUnip2023Psemestre
             Classes.ConexaoBd conexaoBd = new Classes.ConexaoBd();
 
         }
+
+        private void panelPesquisa_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

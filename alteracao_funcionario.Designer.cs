@@ -402,6 +402,7 @@
             this.panelPesquisa.Name = "panelPesquisa";
             this.panelPesquisa.Size = new System.Drawing.Size(786, 50);
             this.panelPesquisa.TabIndex = 49;
+            this.panelPesquisa.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPesquisa_Paint);
             // 
             // barraAlteraFuncio
             // 

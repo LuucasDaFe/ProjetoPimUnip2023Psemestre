@@ -95,7 +95,9 @@ namespace ProjetoPimUnip2023Psemestre
             Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
             //objetoConexao.estabelecerConexao();
             //MessageBox.Show(objetoConexao.calculaSalario());
-            MessageBox.Show(objetoConexao.lerQtdLinhas().ToString());
+            //MessageBox.Show(objetoConexao.lerQtdLinhas().ToString());
+            acesso_usuario user = new acesso_usuario();
+            user.ShowDialog();
         }
 
         private void ImgLanche_Click(object sender, EventArgs e)
