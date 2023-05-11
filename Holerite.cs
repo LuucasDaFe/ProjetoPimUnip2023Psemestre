@@ -32,7 +32,7 @@ namespace ProjetoPimUnip2023Psemestre
         private void dgvListaFuncio_VisibleChanged(object sender, EventArgs e)
         {
             //
-            string comandoSql = "SELECT idfuncionario, nome FROM funcionario;";
+            string comandoSql = "SELECT idfuncionario AS ID, nome AS NOME FROM funcionario WHERE ativo = true;";
             Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
             dgvHoleriteFuncionario.DataSource = objetoConexao.incluirInfoDgvColaboradores(comandoSql);
         }

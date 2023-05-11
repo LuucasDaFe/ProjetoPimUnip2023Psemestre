@@ -16,7 +16,8 @@ namespace ProjetoPimUnip2023Psemestre
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Painel_Inicio());
+            //Application.Run(new Painel_Inicio());
+            Application.Run(new acesso_usuario());
         }
     }
 }

@@ -132,6 +132,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_funcionario_acessar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_funcionario_acessar.Designer.cs">
+      <DependentUpon>Form_funcionario_acessar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funcionario_demitido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="funcionario_demitido.Designer.cs">
+      <DependentUpon>funcionario_demitido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Holerite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +190,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_funcionario_acessar.resx">
+      <DependentUpon>Form_funcionario_acessar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="funcionario_demitido.resx">
+      <DependentUpon>funcionario_demitido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Holerite.resx">
       <DependentUpon>Holerite.cs</DependentUpon>

@@ -93,5 +93,16 @@ namespace ProjetoPimUnip2023Psemestre
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            funcionario_demitido demissao = new funcionario_demitido();
+            demissao.ShowDialog();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

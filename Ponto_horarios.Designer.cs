@@ -37,14 +37,14 @@
             this.lblHolerite = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtBarraPesquisaNomePonto = new System.Windows.Forms.ComboBox();
             this.btnPesquisa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbSelecionaMes = new System.Windows.Forms.ComboBox();
             this.lblPontoHorario = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvRegistroHora = new System.Windows.Forms.DataGridView();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.txtBarraPesquisaNomePonto = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -115,6 +115,15 @@
             this.panel3.TabIndex = 4;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // txtBarraPesquisaNomePonto
+            // 
+            this.txtBarraPesquisaNomePonto.FormattingEnabled = true;
+            this.txtBarraPesquisaNomePonto.Location = new System.Drawing.Point(404, 15);
+            this.txtBarraPesquisaNomePonto.Name = "txtBarraPesquisaNomePonto";
+            this.txtBarraPesquisaNomePonto.Size = new System.Drawing.Size(316, 21);
+            this.txtBarraPesquisaNomePonto.TabIndex = 57;
+            this.txtBarraPesquisaNomePonto.VisibleChanged += new System.EventHandler(this.barraPesquisaConsulta_VisibleChanged);
+            // 
             // btnPesquisa
             // 
             this.btnPesquisa.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -141,15 +150,28 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Mês:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(717, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // cbSelecionaMes
             // 
             this.cbSelecionaMes.FormattingEnabled = true;
             this.cbSelecionaMes.Items.AddRange(new object[] {
-            "Todos",
-            "Abril ",
-            "Março",
-            "Fevereiro",
-            "Janeiro"});
+            "TODOS",
+            "JANEIRO",
+            "FEVEREIRO",
+            "MARÇO",
+            "ABRIL"});
             this.cbSelecionaMes.Location = new System.Drawing.Point(71, 16);
             this.cbSelecionaMes.Name = "cbSelecionaMes";
             this.cbSelecionaMes.Size = new System.Drawing.Size(153, 21);
@@ -164,19 +186,6 @@
             this.lblPontoHorario.Size = new System.Drawing.Size(121, 22);
             this.lblPontoHorario.TabIndex = 2;
             this.lblPontoHorario.Text = "Funcionario:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(717, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(62, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dgvRegistroHora
             // 
@@ -212,15 +221,6 @@
             this.dgvRegistroHora.TabIndex = 5;
             this.dgvRegistroHora.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaFuncio_CellContentClick);
             this.dgvRegistroHora.VisibleChanged += new System.EventHandler(this.dgvListaFuncio_VisibleChanged);
-            // 
-            // txtBarraPesquisaNomePonto
-            // 
-            this.txtBarraPesquisaNomePonto.FormattingEnabled = true;
-            this.txtBarraPesquisaNomePonto.Location = new System.Drawing.Point(404, 15);
-            this.txtBarraPesquisaNomePonto.Name = "txtBarraPesquisaNomePonto";
-            this.txtBarraPesquisaNomePonto.Size = new System.Drawing.Size(316, 21);
-            this.txtBarraPesquisaNomePonto.TabIndex = 57;
-            this.txtBarraPesquisaNomePonto.VisibleChanged += new System.EventHandler(this.barraPesquisaConsulta_VisibleChanged);
             // 
             // Ponto_horarios
             // 

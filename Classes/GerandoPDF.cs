@@ -12,16 +12,24 @@ namespace ProjetoPimUnip2023Psemestre.Classes
 {
     internal class GerandoPDF
     {
-        public void gerandoPdfHolerite(string id, string nome)
+        public void gerandoPdfHolerite(string id_funcionario, string mes)
         {
-            Classes.ConexaoBd dadosBD = new Classes.ConexaoBd();
+            Classes.ConexaoBd bd = new Classes.ConexaoBd();
+
+            string salarioDoRegistro = bd.lerDadosFloat("salario", "funcionario_cargo", id_funcionario);
+            string nome = bd.consultarOutros("nome", "funcionario", id_funcionario);
+            string cargo = bd.lerTableFuncionario_Cargo(id_funcionario);
+            string departamento = bd.lerTableFuncionario_Departamento(id_funcionario);
+
+            //string id_cargo = bd.verificaIdCargo(id_funcionario);
+
+            //string dataPagamento = bd.mostrarMesHolerite(id_cargo, mes);
+            //string periodo_dias = bd.lerDadosHolerite("periodo_dias", "holerite", id_cargo);
+            //string faltas = bd.lerDadosHolerite("faltas", "holerite", id_cargo);
+            //string outros_descontos = bd.lerDadosFloatolerite("outros_descontos", "holerite", id_cargo);
+            //string inss = bd.lerDadosHolerite("inss", "holerite", id_cargo);
 
 
-            float HoraMes = Convert.ToSingle(dadosBD.calculaHora(id));
-            float salarioHora = dadosBD.calculaSalario(id);
-
-            float salarioDoRegistro = salarioHora * 220;
-            float salarioMes = HoraMes * salarioHora;
 
             string nomeArquivo = @"C:\Users\Lucas\Desktop\PIM 1° SEMESTRE\ProjetoPimUnip2023Psemestre\Holerites\Lucas\\holerite.pdf";
             FileStream ArquivoPDF = new FileStream(nomeArquivo, FileMode.Create);
@@ -36,8 +44,8 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             string dados = "";
 
             //Criando Paragrafos
-            Paragraph paragrafo = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 20, (int)System.Drawing.FontStyle.Bold));
-            paragrafo.Alignment = Element.ALIGN_CENTER;
+            Paragraph paragrafo = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 14, (int)System.Drawing.FontStyle.Bold));
+            paragrafo.Alignment = Element.ALIGN_RIGHT;
             //paragrafo.Add("HOLERITE");
             paragrafo.Add("\n");
 
@@ -52,7 +60,7 @@ namespace ProjetoPimUnip2023Psemestre.Classes
 
 
             tabela1.AddCell("Planeta Buguer \nRua XXX \nCNPJ: 11.222.333.4444.00");
-            tabela1.AddCell("Rebibo de pagamento");
+            tabela1.AddCell($"Rebibo de pagamento \n{"dataPagamento"}");
 
             PdfPTable tabela2 = new PdfPTable(5);
             Paragraph paragrafo1 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Bold));
@@ -78,9 +86,9 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             Paragraph paragrafo10 = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
             paragrafo6.Add("ID");
             paragrafo7.Add(nome);
-            paragrafo8.Add("xx/xx/xxxx");
-            paragrafo9.Add("SERVICEDESK");
-            paragrafo10.Add("CCO");
+            paragrafo8.Add("dataPagamento");
+            paragrafo9.Add(cargo);
+            paragrafo10.Add(departamento);
             tabela2.AddCell(paragrafo6);
             tabela2.AddCell(paragrafo7);
             tabela2.AddCell(paragrafo8);
@@ -110,10 +118,10 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             Paragraph valorVencimento = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 6, (int)System.Drawing.FontStyle.Regular));
             Paragraph valorDesconto = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 6, (int)System.Drawing.FontStyle.Regular));
             nCod.Add("xx");//varrial coodigo holerite
-            valorDescricao.Add($"SALARIO:{salarioMes:F2} R$ \nINSS \nIRFF");// variavel descricao holerite
-            valorReferencia.Add("xx\nxx\nxxxx"); // variavel referencia holerite
-            valorVencimento.Add("N Valor"); // variavel vencimento do holerite
-            valorDesconto.Add("N Valor"); //varial desconto do holerite
+            valorDescricao.Add($"SALARIO:{salarioDoRegistro:F2} R$ \nINSS {"inss"}\nIRFF xxxx\n\n\n\n");// variavel descricao holerite
+            valorReferencia.Add("xx\nxx\nxxxx\n\n\n\n"); // variavel referencia holerite
+            valorVencimento.Add("N Valor\n\n\n\n"); // variavel vencimento do holerite
+            valorDesconto.Add($"N {"outros_descontos"}\n\n\n\n"); //varial desconto do holerite
             tabela3.AddCell(nCod);
             tabela3.AddCell(valorDescricao);
             tabela3.AddCell(valorReferencia);
@@ -142,7 +150,7 @@ namespace ProjetoPimUnip2023Psemestre.Classes
             Paragraph VcalcFgts = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
             Paragraph VfgtsMes = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
             Paragraph VbaseCalcIrrf = new Paragraph(dados, new iTextSharp.text.Font(iTextSharp.text.Font.NORMAL, 8, (int)System.Drawing.FontStyle.Regular));
-            Vsalario.Add(salarioDoRegistro.ToString());//varrial salrio holerite
+            Vsalario.Add(salarioDoRegistro);//varrial salrio holerite
             VcontrInss.Add("1055");// variavel Inss holerite
             VcalcFgts.Add("150"); // variavel fgts holerite
             VfgtsMes.Add("150r"); // variavel fgts do mes do holerite

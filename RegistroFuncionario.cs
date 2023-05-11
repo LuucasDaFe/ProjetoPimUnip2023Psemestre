@@ -35,26 +35,26 @@ namespace ProjetoPimUnip2023Psemestre
             InfoAgenciaBanco.Text = con.consultarInfoFuncionario("agencia", "funcionario", nome);
 
             //valores da tabela documento -----------------------------------------------------------------------------------------
-            infoCpf.Text = con.consultaroutros("cpf", "documentos", id_funcionario);
-            infoPis.Text = con.consultaroutros("pis", "documentos", id_funcionario);
-            InfoRegistroRG.Text = con.consultaroutros("rg", "documentos", id_funcionario);
-            info_T_Eleitor.Text = con.consultaroutros("titulo_eleitor", "documentos", id_funcionario);
-            info_T_secao.Text = con.consultaroutros("titulo_secao", "documentos", id_funcionario);
-            info_T_zona.Text = con.consultaroutros("titulo_zona", "documentos", id_funcionario);
-            info_cart_militar.Text = con.consultaroutros("cert_militar", "documentos", id_funcionario);
-            infoCnh.Text = con.consultaroutros("cnh", "documentos", id_funcionario);
-            infoCtps.Text = con.consultaroutros("ctps", "documentos", id_funcionario);
-            info_ctps_serie.Text = con.consultaroutros("ctps_serie", "documentos", id_funcionario);
+            infoCpf.Text = con.consultarOutros("cpf", "documentos", id_funcionario);
+            infoPis.Text = con.consultarOutros("pis", "documentos", id_funcionario);
+            InfoRegistroRG.Text = con.consultarOutros("rg", "documentos", id_funcionario);
+            info_T_Eleitor.Text = con.consultarOutros("titulo_eleitor", "documentos", id_funcionario);
+            info_T_secao.Text = con.consultarOutros("titulo_secao", "documentos", id_funcionario);
+            info_T_zona.Text = con.consultarOutros("titulo_zona", "documentos", id_funcionario);
+            info_cart_militar.Text = con.consultarOutros("cert_militar", "documentos", id_funcionario);
+            infoCnh.Text = con.consultarOutros("cnh", "documentos", id_funcionario);
+            infoCtps.Text = con.consultarOutros("ctps", "documentos", id_funcionario);
+            info_ctps_serie.Text = con.consultarOutros("ctps_serie", "documentos", id_funcionario);
 
             // valores da tabela endereco_contato -------------------------------------------------------------------------------------
-            InfoCep.Text = con.consultaroutros("cep", "endereco_contato", id_funcionario);
-            infoRua.Text = con.consultaroutros("logradouro", "endereco_contato", id_funcionario);
-            info_N_rua.Text = con.consultaroutros("numero", "endereco_contato", id_funcionario);
-            infoBairro.Text = con.consultaroutros("bairro", "endereco_contato", id_funcionario);
-            infoCidade.Text = con.consultaroutros("cidade", "endereco_contato", id_funcionario);
-            cbEstado.Text = con.consultaroutros("estado", "endereco_contato", id_funcionario);
-            infoCelular.Text = con.consultaroutros("celular", "endereco_contato", id_funcionario);
-            InfoEmail.Text = con.consultaroutros("email", "endereco_contato", id_funcionario);
+            InfoCep.Text = con.consultarOutros("cep", "endereco_contato", id_funcionario);
+            infoRua.Text = con.consultarOutros("logradouro", "endereco_contato", id_funcionario);
+            info_N_rua.Text = con.consultarOutros("numero", "endereco_contato", id_funcionario);
+            infoBairro.Text = con.consultarOutros("bairro", "endereco_contato", id_funcionario);
+            infoCidade.Text = con.consultarOutros("cidade", "endereco_contato", id_funcionario);
+            cbEstado.Text = con.consultarOutros("estado", "endereco_contato", id_funcionario);
+            infoCelular.Text = con.consultarOutros("celular", "endereco_contato", id_funcionario);
+            InfoEmail.Text = con.consultarOutros("email", "endereco_contato", id_funcionario);
 
             // valores da tabela funcionarios_cargo------------------------------------------------------------------------------------------
             InfoSalario.Text = con.lerDadosFloat("salario", "funcionario_cargo",id_funcionario);
@@ -89,7 +89,7 @@ namespace ProjetoPimUnip2023Psemestre
             Classes.ConexaoBd objConect = new Classes.ConexaoBd();
             string atributo = "nome";
             string entidade = "funcionario";
-            barraConsultaFuncionario.DataSource = objConect.mostrarNoComboBOx(atributo, entidade);
+            barraConsultaFuncionario.DataSource = objConect.mostrarNoComboBox(atributo, entidade);
             barraConsultaFuncionario.ValueMember = atributo;
         }
     }

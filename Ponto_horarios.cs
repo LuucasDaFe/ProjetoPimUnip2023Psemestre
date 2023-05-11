@@ -62,7 +62,7 @@ namespace ProjetoPimUnip2023Psemestre
 
             string x = cbSelecionaMes.Text;
             string mes = con.verificaMesSelcionado(x);
-            dgvRegistroHora.DataSource = con.mostrarRegistroHoras(id_funcionario,x);
+            dgvRegistroHora.DataSource = con.mostrarRegistroHoras(id_funcionario,mes);
 
 
         }
@@ -77,7 +77,7 @@ namespace ProjetoPimUnip2023Psemestre
             Classes.ConexaoBd objConect = new Classes.ConexaoBd();
             string comando = "nome";
             string entidade = "funcionario";
-            txtBarraPesquisaNomePonto.DataSource = objConect.mostrarNoComboBOx(comando, entidade);
+            txtBarraPesquisaNomePonto.DataSource = objConect.mostrarNoComboBox(comando, entidade);
             txtBarraPesquisaNomePonto.ValueMember = comando;
         }
     }

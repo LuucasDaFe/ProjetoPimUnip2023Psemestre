@@ -41,20 +41,14 @@
             this.ImgLanche = new System.Windows.Forms.PictureBox();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.iconMinimizar = new System.Windows.Forms.PictureBox();
-            this.iconRestaurar = new System.Windows.Forms.PictureBox();
-            this.iconMaximizar = new System.Windows.Forms.PictureBox();
             this.iconFechar = new System.Windows.Forms.PictureBox();
-            this.btnSlide = new System.Windows.Forms.PictureBox();
             this.painelContenedor = new System.Windows.Forms.Panel();
             this.menuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgLanche)).BeginInit();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconRestaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconFechar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
             this.SuspendLayout();
             // 
             // menuVertical
@@ -216,10 +210,7 @@
             // 
             this.barraTitulo.BackColor = System.Drawing.Color.White;
             this.barraTitulo.Controls.Add(this.iconMinimizar);
-            this.barraTitulo.Controls.Add(this.iconRestaurar);
-            this.barraTitulo.Controls.Add(this.iconMaximizar);
             this.barraTitulo.Controls.Add(this.iconFechar);
-            this.barraTitulo.Controls.Add(this.btnSlide);
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(250, 0);
             this.barraTitulo.Name = "barraTitulo";
@@ -232,38 +223,13 @@
             // 
             this.iconMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("iconMinimizar.Image")));
-            this.iconMinimizar.Location = new System.Drawing.Point(938, 9);
+            this.iconMinimizar.Location = new System.Drawing.Point(968, 9);
             this.iconMinimizar.Name = "iconMinimizar";
             this.iconMinimizar.Size = new System.Drawing.Size(24, 21);
             this.iconMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconMinimizar.TabIndex = 1;
             this.iconMinimizar.TabStop = false;
             this.iconMinimizar.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // iconRestaurar
-            // 
-            this.iconRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("iconRestaurar.Image")));
-            this.iconRestaurar.Location = new System.Drawing.Point(968, 9);
-            this.iconRestaurar.Name = "iconRestaurar";
-            this.iconRestaurar.Size = new System.Drawing.Size(24, 21);
-            this.iconRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconRestaurar.TabIndex = 1;
-            this.iconRestaurar.TabStop = false;
-            this.iconRestaurar.Visible = false;
-            this.iconRestaurar.Click += new System.EventHandler(this.iconRestaurar_Click);
-            // 
-            // iconMaximizar
-            // 
-            this.iconMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("iconMaximizar.Image")));
-            this.iconMaximizar.Location = new System.Drawing.Point(968, 9);
-            this.iconMaximizar.Name = "iconMaximizar";
-            this.iconMaximizar.Size = new System.Drawing.Size(24, 21);
-            this.iconMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.iconMaximizar.TabIndex = 1;
-            this.iconMaximizar.TabStop = false;
-            this.iconMaximizar.Click += new System.EventHandler(this.iconMaximizar_Click);
             // 
             // iconFechar
             // 
@@ -276,17 +242,6 @@
             this.iconFechar.TabIndex = 0;
             this.iconFechar.TabStop = false;
             this.iconFechar.Click += new System.EventHandler(this.iconFechar_Click);
-            // 
-            // btnSlide
-            // 
-            this.btnSlide.Image = ((System.Drawing.Image)(resources.GetObject("btnSlide.Image")));
-            this.btnSlide.Location = new System.Drawing.Point(6, 9);
-            this.btnSlide.Name = "btnSlide";
-            this.btnSlide.Size = new System.Drawing.Size(35, 35);
-            this.btnSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSlide.TabIndex = 0;
-            this.btnSlide.TabStop = false;
-            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
             // 
             // painelContenedor
             // 
@@ -318,10 +273,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ImgLanche)).EndInit();
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconRestaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconFechar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,12 +284,9 @@
         private System.Windows.Forms.Panel menuVertical;
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.Panel painelContenedor;
-        private System.Windows.Forms.PictureBox btnSlide;
         private System.Windows.Forms.PictureBox ImgLanche;
         private System.Windows.Forms.PictureBox iconFechar;
         private System.Windows.Forms.PictureBox iconMinimizar;
-        private System.Windows.Forms.PictureBox iconRestaurar;
-        private System.Windows.Forms.PictureBox iconMaximizar;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button button3;

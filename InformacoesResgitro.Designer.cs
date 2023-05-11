@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_addCpf = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_addRg = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_addEstado = new System.Windows.Forms.ComboBox();
             this.txt_add_N_rua = new System.Windows.Forms.TextBox();
@@ -51,6 +55,7 @@
             this.txt_addCep = new System.Windows.Forms.TextBox();
             this.txt_addNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.imgregistroFuncionario = new System.Windows.Forms.PictureBox();
             this.txt_addPai = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_addMae = new System.Windows.Forms.TextBox();
@@ -79,11 +84,6 @@
             this.cb_addCargo = new System.Windows.Forms.ComboBox();
             this.cb_addDepartamento = new System.Windows.Forms.ComboBox();
             this.cb_addSexo = new System.Windows.Forms.ComboBox();
-            this.imgregistroFuncionario = new System.Windows.Forms.PictureBox();
-            this.txt_addCpf = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_addRg = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txt_addCtps_serie = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.txt_addCert_militar = new System.Windows.Forms.TextBox();
@@ -100,8 +100,16 @@
             this.label28 = new System.Windows.Forms.Label();
             this.txt_addPis = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
+            this.txtNomeUsuario = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtSenhaUsuario = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cbNivel = new System.Windows.Forms.ComboBox();
+            this.LBLNIVEL = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgregistroFuncionario)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -138,6 +146,43 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1283, 226);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txt_addCpf
+            // 
+            this.txt_addCpf.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addCpf.Location = new System.Drawing.Point(323, 81);
+            this.txt_addCpf.Name = "txt_addCpf";
+            this.txt_addCpf.Size = new System.Drawing.Size(224, 26);
+            this.txt_addCpf.TabIndex = 91;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(220, 87);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 20);
+            this.label7.TabIndex = 90;
+            this.label7.Text = "CPF:";
+            // 
+            // txt_addRg
+            // 
+            this.txt_addRg.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_addRg.Location = new System.Drawing.Point(323, 49);
+            this.txt_addRg.Name = "txt_addRg";
+            this.txt_addRg.Size = new System.Drawing.Size(184, 26);
+            this.txt_addRg.TabIndex = 89;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(220, 55);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 20);
+            this.label6.TabIndex = 88;
+            this.label6.Text = "RG:";
             // 
             // label2
             // 
@@ -341,6 +386,17 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Nome:";
             // 
+            // imgregistroFuncionario
+            // 
+            this.imgregistroFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.imgregistroFuncionario.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagem_Icone_Funcionario;
+            this.imgregistroFuncionario.Location = new System.Drawing.Point(27, 14);
+            this.imgregistroFuncionario.Name = "imgregistroFuncionario";
+            this.imgregistroFuncionario.Size = new System.Drawing.Size(178, 191);
+            this.imgregistroFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgregistroFuncionario.TabIndex = 3;
+            this.imgregistroFuncionario.TabStop = false;
+            // 
             // txt_addPai
             // 
             this.txt_addPai.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -511,7 +567,7 @@
             this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(295, 482);
+            this.button1.Location = new System.Drawing.Point(692, 517);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(256, 34);
             this.button1.TabIndex = 30;
@@ -524,7 +580,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Red;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(709, 482);
+            this.btnCancelar.Location = new System.Drawing.Point(990, 517);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(256, 34);
             this.btnCancelar.TabIndex = 31;
@@ -607,57 +663,10 @@
             this.cb_addSexo.Size = new System.Drawing.Size(160, 21);
             this.cb_addSexo.TabIndex = 55;
             // 
-            // imgregistroFuncionario
-            // 
-            this.imgregistroFuncionario.BackColor = System.Drawing.Color.Transparent;
-            this.imgregistroFuncionario.Image = global::ProjetoPimUnip2023Psemestre.Properties.Resources.Imagem_Icone_Funcionario;
-            this.imgregistroFuncionario.Location = new System.Drawing.Point(27, 14);
-            this.imgregistroFuncionario.Name = "imgregistroFuncionario";
-            this.imgregistroFuncionario.Size = new System.Drawing.Size(178, 191);
-            this.imgregistroFuncionario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgregistroFuncionario.TabIndex = 3;
-            this.imgregistroFuncionario.TabStop = false;
-            // 
-            // txt_addCpf
-            // 
-            this.txt_addCpf.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addCpf.Location = new System.Drawing.Point(323, 81);
-            this.txt_addCpf.Name = "txt_addCpf";
-            this.txt_addCpf.Size = new System.Drawing.Size(224, 26);
-            this.txt_addCpf.TabIndex = 91;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(220, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 20);
-            this.label7.TabIndex = 90;
-            this.label7.Text = "CPF:";
-            // 
-            // txt_addRg
-            // 
-            this.txt_addRg.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addRg.Location = new System.Drawing.Point(323, 49);
-            this.txt_addRg.Name = "txt_addRg";
-            this.txt_addRg.Size = new System.Drawing.Size(184, 26);
-            this.txt_addRg.TabIndex = 89;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(220, 55);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 20);
-            this.label6.TabIndex = 88;
-            this.label6.Text = "RG:";
-            // 
             // txt_addCtps_serie
             // 
             this.txt_addCtps_serie.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addCtps_serie.Location = new System.Drawing.Point(521, 436);
+            this.txt_addCtps_serie.Location = new System.Drawing.Point(521, 439);
             this.txt_addCtps_serie.Name = "txt_addCtps_serie";
             this.txt_addCtps_serie.Size = new System.Drawing.Size(224, 26);
             this.txt_addCtps_serie.TabIndex = 73;
@@ -666,7 +675,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(393, 442);
+            this.label31.Location = new System.Drawing.Point(393, 445);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(87, 20);
             this.label31.TabIndex = 72;
@@ -747,7 +756,7 @@
             // txt_addCtps
             // 
             this.txt_addCtps.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_addCtps.Location = new System.Drawing.Point(521, 401);
+            this.txt_addCtps.Location = new System.Drawing.Point(521, 404);
             this.txt_addCtps.Name = "txt_addCtps";
             this.txt_addCtps.Size = new System.Drawing.Size(224, 26);
             this.txt_addCtps.TabIndex = 77;
@@ -756,7 +765,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(393, 407);
+            this.label29.Location = new System.Drawing.Point(393, 410);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(46, 20);
             this.label29.TabIndex = 76;
@@ -798,12 +807,81 @@
             this.label30.TabIndex = 78;
             this.label30.Text = "PIS:";
             // 
+            // txtNomeUsuario
+            // 
+            this.txtNomeUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeUsuario.Location = new System.Drawing.Point(133, 13);
+            this.txtNomeUsuario.Name = "txtNomeUsuario";
+            this.txtNomeUsuario.Size = new System.Drawing.Size(224, 26);
+            this.txtNomeUsuario.TabIndex = 83;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(5, 19);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(67, 20);
+            this.label33.TabIndex = 82;
+            this.label33.Text = "Usuario:";
+            // 
+            // txtSenhaUsuario
+            // 
+            this.txtSenhaUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenhaUsuario.Location = new System.Drawing.Point(133, 48);
+            this.txtSenhaUsuario.Name = "txtSenhaUsuario";
+            this.txtSenhaUsuario.Size = new System.Drawing.Size(224, 26);
+            this.txtSenhaUsuario.TabIndex = 81;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(5, 54);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(58, 20);
+            this.label34.TabIndex = 80;
+            this.label34.Text = "Senha:";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LightCyan;
+            this.panel3.Controls.Add(this.cbNivel);
+            this.panel3.Controls.Add(this.LBLNIVEL);
+            this.panel3.Controls.Add(this.txtNomeUsuario);
+            this.panel3.Controls.Add(this.label34);
+            this.panel3.Controls.Add(this.label33);
+            this.panel3.Controls.Add(this.txtSenhaUsuario);
+            this.panel3.Location = new System.Drawing.Point(24, 489);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(555, 86);
+            this.panel3.TabIndex = 84;
+            // 
+            // cbNivel
+            // 
+            this.cbNivel.FormattingEnabled = true;
+            this.cbNivel.Location = new System.Drawing.Point(462, 18);
+            this.cbNivel.Name = "cbNivel";
+            this.cbNivel.Size = new System.Drawing.Size(61, 21);
+            this.cbNivel.TabIndex = 85;
+            // 
+            // LBLNIVEL
+            // 
+            this.LBLNIVEL.AutoSize = true;
+            this.LBLNIVEL.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLNIVEL.Location = new System.Drawing.Point(405, 18);
+            this.LBLNIVEL.Name = "LBLNIVEL";
+            this.LBLNIVEL.Size = new System.Drawing.Size(50, 20);
+            this.LBLNIVEL.TabIndex = 84;
+            this.LBLNIVEL.Text = "Nível:";
+            // 
             // InformacoesResgitro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1281, 528);
+            this.ClientSize = new System.Drawing.Size(1281, 587);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.txt_addPis);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.txt_addCtps);
@@ -856,6 +934,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgregistroFuncionario)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -935,5 +1015,12 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox txt_addPis;
         private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox txtNomeUsuario;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox txtSenhaUsuario;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox cbNivel;
+        private System.Windows.Forms.Label LBLNIVEL;
     }
 }

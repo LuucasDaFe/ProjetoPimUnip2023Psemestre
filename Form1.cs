@@ -63,15 +63,12 @@ namespace ProjetoPimUnip2023Psemestre
         private void iconMaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            iconRestaurar.Visible = true;
-            iconMaximizar.Visible = false;
+           
         }
 
         private void iconRestaurar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            iconRestaurar.Visible = false;
-            iconMaximizar.Visible = true;
+            this.WindowState = FormWindowState.Normal;    
         }
 
         private void barraTitulo_Paint(object sender, PaintEventArgs e)
@@ -94,10 +91,11 @@ namespace ProjetoPimUnip2023Psemestre
         {
             Classes.ConexaoBd objetoConexao = new Classes.ConexaoBd();
             //objetoConexao.estabelecerConexao();
-            //MessageBox.Show(objetoConexao.calculaSalario());
+            //MessageBox.Show(objetoConexao.calcularRegistroHoras("1","3"));
+            //MessageBox.Show(objetoConexao.calculaHora("1"));
             //MessageBox.Show(objetoConexao.lerQtdLinhas().ToString());
-            acesso_usuario user = new acesso_usuario();
-            user.ShowDialog();
+            objetoConexao.abrirForms(1);
+  
         }
 
         private void ImgLanche_Click(object sender, EventArgs e)
